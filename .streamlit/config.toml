@@ -1,0 +1,19 @@
+# These Streamlit settings apply both locally and on Streamlit Community Cloud.
+[logger]
+# Only real errors are logged, because Streamlit warns about unused parts of the transformers library when it starts.
+level = "error"
+
+[client]
+# The toolbar shows only the options a visitor needs, as on a normal chat website.
+toolbarMode = "minimal"
+
+[theme]
+# The chat uses the light theme with the rounded Nunito font, dark slate text and a bordered sidebar.
+base = "light"
+textColor = "#1f2937"
+font = "Nunito:https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+showSidebarBorder = true
+
+[theme.sidebar]
+# The sidebar is a light grey that sets it apart from the white conversation area.
+backgroundColor = "#f5f6f8"
