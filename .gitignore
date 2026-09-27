@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+
+# Trained models are too large for Git, so notebooks 03 and 04 recreate them
+models/
+
+# Third-party data downloaded by notebook 04
+data/external/
+
+# Editor settings
+.vscode/
+
+# Secrets
+.env
