@@ -1,0 +1,2 @@
+# CSV files stay byte-identical because several AfriMed-QA answers contain Windows line breaks inside quoted fields.
+*.csv -text
