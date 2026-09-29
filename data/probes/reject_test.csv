@@ -1,0 +1,137 @@
+question,category,source,topic,split
+What place had the Norman Arab architectural style?,non_medical,SQuAD 2.0 dev,Normans,test
+What is the Norman architecture idiom?,non_medical,SQuAD 2.0 dev,Normans,test
+Who was Margaret's brother?,non_medical,SQuAD 2.0 dev,Normans,test
+Who was famed for their Christian spirit?,non_medical,SQuAD 2.0 dev,Normans,test
+Who used the church to unify themselves?,non_medical,SQuAD 2.0 dev,Normans,test
+What complexity class is commonly characterized by unknown algorithms to enhance solvability?,non_medical,SQuAD 2.0 dev,Computational_complexity_theory,test
+What is the least critical resource in the analysis of computational problems associated with non-deterministic Turing machines?,non_medical,SQuAD 2.0 dev,Computational_complexity_theory,test
+"In the effort of maintaining a level of abstraction, what choice is typically left independent?",non_medical,SQuAD 2.0 dev,Computational_complexity_theory,test
+"In computational complexity theory, what is the term given to describe the baseline abstract question needing to be solved?",non_medical,SQuAD 2.0 dev,Computational_complexity_theory,test
+A specific algorithm demonstrating T(n) represents what measure of time complexity?,non_medical,SQuAD 2.0 dev,Computational_complexity_theory,test
+How many subscribers were lost within two months of launch from BSkyB?,non_medical,SQuAD 2.0 dev,Sky_(United_Kingdom),test
+What did Alec Shelbrooke propose payments of benefits to be made on?,non_medical,SQuAD 2.0 dev,Sky_(United_Kingdom),test
+What was the UK's least popular TV service in 2015?,non_medical,SQuAD 2.0 dev,Sky_(United_Kingdom),test
+What company agreed to terminate high court proceedings with BSkyB?,non_medical,SQuAD 2.0 dev,Sky_(United_Kingdom),test
+Who does BSkyB have an operating license from?,non_medical,SQuAD 2.0 dev,Sky_(United_Kingdom),test
+What party rules in Melbourne's inner regions?,non_medical,SQuAD 2.0 dev,Victoria_(Australia),test
+What religion are most of the lower class in Victoria?,non_medical,SQuAD 2.0 dev,Victoria_(Australia),test
+What type of manufacturing plant is Victoria getting soon?,non_medical,SQuAD 2.0 dev,Victoria_(Australia),test
+What is the gauge of the Victorian power lines?,non_medical,SQuAD 2.0 dev,Victoria_(Australia),test
+What brand of car is manufactured in Broadmeadows?,non_medical,SQuAD 2.0 dev,Victoria_(Australia),test
+What leader led the Dutch Revolt and wrote Apologie?,non_medical,SQuAD 2.0 dev,Huguenot,test
+When did Huguenots first arrive in Helsinki?,non_medical,SQuAD 2.0 dev,Huguenot,test
+What was required of Huguenot children after the Edict was revoked?,non_medical,SQuAD 2.0 dev,Huguenot,test
+What is the present-day location of this church?,non_medical,SQuAD 2.0 dev,Huguenot,test
+In what year did Edmund Bohun of the Humphrey de Bohun line of French royalty move to North America?,non_medical,SQuAD 2.0 dev,Huguenot,test
+What did the Department of Energy end in 1974?,non_medical,SQuAD 2.0 dev,1973_oil_crisis,test
+What have politically correct policies about nuclear power promoted in America?,non_medical,SQuAD 2.0 dev,1973_oil_crisis,test
+Name an extra that was added to the production of the compacts.,non_medical,SQuAD 2.0 dev,1973_oil_crisis,test
+What happened to other currencies value when the US abandoned oil?,non_medical,SQuAD 2.0 dev,1973_oil_crisis,test
+Which oil producer is a close ally of the United States?,non_medical,SQuAD 2.0 dev,1973_oil_crisis,test
+"Many changes in the vegetation of the amazon rainforest took place since the  Last Glacial Maximum, which was how many years ago?",non_medical,SQuAD 2.0 dev,Amazon_rainforest,test
+The rain force failed to thrive during what periods?,non_medical,SQuAD 2.0 dev,Amazon_rainforest,test
+What kind of forest is the Amazon rainforest?,non_medical,SQuAD 2.0 dev,Amazon_rainforest,test
+"Between 96,660 and 128,843 vertebrate species live where?",non_medical,SQuAD 2.0 dev,Amazon_rainforest,test
+Evidence for what types of structures were found in 2003?,non_medical,SQuAD 2.0 dev,Amazon_rainforest,test
+What is one thing that rebellion must have in Black's Law Dictionary?,non_medical,SQuAD 2.0 dev,Civil_disobedience,test
+What needs to be avoided with civil disobedience?,non_medical,SQuAD 2.0 dev,Civil_disobedience,test
+Thoreau argues that usually majority rules but their views collectively are sometimes?,non_medical,SQuAD 2.0 dev,Civil_disobedience,test
+How did the Camden 28 decide to submit themselves to the court after pleading guilty?,non_medical,SQuAD 2.0 dev,Civil_disobedience,test
+Who is to blame for acting unjustly?,non_medical,SQuAD 2.0 dev,Civil_disobedience,test
+"In the EU in 2009, what was the fatal injury rate among construction workers?",non_medical,SQuAD 2.0 dev,Construction,test
+What are other common causes of fatalities in dangerous occupations in the world?,non_medical,SQuAD 2.0 dev,Construction,test
+Any subcontractor has a direct contractual relationship with who?,non_medical,SQuAD 2.0 dev,Construction,test
+Dutch architect Janjaap Ruijssenaars's performative architecture 3D-printed building is scheduled to be built when?,non_medical,SQuAD 2.0 dev,Construction,test
+Who doesn't benefit when a project doesn't follow a residential district?,non_medical,SQuAD 2.0 dev,Construction,test
+What Union is Antonis Samaras a part of?,non_medical,SQuAD 2.0 dev,Harvard_University,test
+After what higher learning model was the school designed?,non_medical,SQuAD 2.0 dev,Harvard_University,test
+How is the Yale rowing crew ranked?,non_medical,SQuAD 2.0 dev,Harvard_University,test
+What university was John of London an alum of?,non_medical,SQuAD 2.0 dev,Harvard_University,test
+How much of a loss did Forbes suffer in 2008?,non_medical,SQuAD 2.0 dev,Harvard_University,test
+What organization does climate related research?,non_medical,SQuAD 2.0 dev,Intergovernmental_Panel_on_Climate_Change,test
+When will enhanced greenhouse effect reach alarming levels?,non_medical,SQuAD 2.0 dev,Intergovernmental_Panel_on_Climate_Change,test
+When was the IPCC Fourth Assessment Report published?,non_medical,SQuAD 2.0 dev,Intergovernmental_Panel_on_Climate_Change,test
+Which study suggests that previous estimates were overstated?,non_medical,SQuAD 2.0 dev,Intergovernmental_Panel_on_Climate_Change,test
+What report excluded a graph showing temperature reconstruction?,non_medical,SQuAD 2.0 dev,Intergovernmental_Panel_on_Climate_Change,test
+When did the Democratic Republic of Iraq collapse?,non_medical,SQuAD 2.0 dev,Islamism,test
+What was Sadat not seeking by releasing Islamists from prison?,non_medical,SQuAD 2.0 dev,Islamism,test
+When was Qutb born?,non_medical,SQuAD 2.0 dev,Islamism,test
+What relationship with Israel is Sadat against?,non_medical,SQuAD 2.0 dev,Islamism,test
+Where did Maududi's books place Islam?,non_medical,SQuAD 2.0 dev,Islamism,test
+Who did the geographic scholars not work for?,non_medical,SQuAD 2.0 dev,Imperialism,test
+Imperialism is responsible for the slow spread of what?,non_medical,SQuAD 2.0 dev,Imperialism,test
+Who did not charter the British East India Company?,non_medical,SQuAD 2.0 dev,Imperialism,test
+What was used by the North to justify control over western territories?,non_medical,SQuAD 2.0 dev,Imperialism,test
+The Asante and Lunda Empires were not in which region?,non_medical,SQuAD 2.0 dev,Imperialism,test
+What is Warsaw's name in the Polish language?,non_medical,SQuAD 2.0 dev,Warsaw,test
+What park is close to Vistula street?,non_medical,SQuAD 2.0 dev,Warsaw,test
+Where is the Congress Hall located?,non_medical,SQuAD 2.0 dev,Warsaw,test
+How many kilometers is Vistula from the Carpathian Mountains?,non_medical,SQuAD 2.0 dev,Warsaw,test
+What is another notable university in Warsaw after the University of Warsaw?,non_medical,SQuAD 2.0 dev,Warsaw,test
+What were British plans allied with the French?,non_medical,SQuAD 2.0 dev,French_and_Indian_War,test
+When was the European portion of the Seven Years War incomplete?,non_medical,SQuAD 2.0 dev,French_and_Indian_War,test
+How much success did this expedition with Braddock find?,non_medical,SQuAD 2.0 dev,French_and_Indian_War,test
+Where did French fur trappers travel?,non_medical,SQuAD 2.0 dev,French_and_Indian_War,test
+What letter didn't Washington present to Saint-Pierre ?,non_medical,SQuAD 2.0 dev,French_and_Indian_War,test
+"What are the treatment options available for hydrocephalus, and what can I expect in terms of prognosis and long-term management?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,6. Hydrocephalus,test
+What is causing the Hydrocephalus?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,6. Hydrocephalus,test
+Can you explain the potential side effects of the treatment options for Acromegaly?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Acromegaly,test
+"What diagnostic tests should I undergo to confirm the diagnosis of Acromegaly, and what are the treatment options available?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Acromegaly,test
+What are the diagnostic tests for Addison's Disease?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Addison's Disease,test
+Can my muscles weakness cause Addison disease or something else?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Addison's Disease,test
+"What are the different types of angioedema, and how does their underlying mechanism differ?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Angioedema,test
+What steps can I take to identify and avoid potential triggers of Angioedema in the future?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Angioedema,test
+"What are some long-term management strategies for Ankylosing Spondylitis, and are there any lifestyle modifications or exercises that could help improve my condition over time?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Ankylosing Spondylitis,test
+"Can you provide recommendations for managing the psychological impact of living with Ankylosing Spondylitis, such as coping strategies or support groups?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Ankylosing Spondylitis,test
+Are there any specific eyelid hygiene practices or home remedies that I can implement to help manage and prevent future flare-ups of blepharitis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Blepharitis,test
+What daily eye care routine can help manage and prevent blepharitis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Blepharitis,test
+"Could there be any underlying medical conditions or lifestyle factors contributing to my bursitis, and what steps can I take to address them and prevent future flare-ups?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Bursitis,test
+Are there any specific activities or habits that I should avoid or modify to prevent future episodes of bursitis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Bursitis,test
+"Can you explain the potential implications of cardiomyopathies on my daily activities and lifestyle, and are there any specific precautions or lifestyle adjustments I should consider?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Cardiomyopathies,test
+What diagnostic tests or screenings should I undergo to confirm the diagnosis of Cardiomyopathies and assess the severity of my condition?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Cardiomyopathies,test
+"Doctor, a lot of people say that some illness is age related, can the knee pain and stiffness be because of my current age ?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Chronic Knee Pain,test
+Is chronic knee pain going to subsequently tamper with my walk?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Chronic Knee Pain,test
+What are some effective coping strategies or therapies that I can utilize to manage the symptoms of conversion disorder and improve my overall well-being?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Conversion Disorder,test
+"What are the available treatment options for managing symptoms of conversion disorder, and what is the prognosis?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Conversion Disorder,test
+What could be the underlying cause of my folliculitis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Folliculitis,test
+"What could be the underlying cause of my folliculitis, and how can I prevent future occurrences?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Folliculitis,test
+"Doctor, what other symptoms will confirm hydrocephalus?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Hydrocephalus,test
+"Can you explain the potential long-term effects of hydrocephalus on my child's development, and what steps can we take to optimize their quality of life?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Hydrocephalus,test
+What are the red flags for hyperhidrosis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Hyperhidrosis,test
+How often should follow-up appointments be scheduled to monitor the progression of Keratoconus?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Keratoconus,test
+what are the potential long-term implications or risks associated with treating keratoconus?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Keratoconus,test
+What foods trigger lichen planus?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Lichen Planus,test
+"What are the potential triggers or exacerbating factors for Lichen Planus, and how can I avoid or minimize them to manage my symptoms effectively?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Lichen Planus,test
+"What non-invasive treatment options are available for managing lumbar spondylosis, and what lifestyle changes can I make to alleviate symptoms and prevent further deterioration?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Lumbar spondylosis,test
+Are there any specific exercises or physical therapy techniques I can do to alleviate my symptoms and prevent further progression of lumbar spondylosis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Lumbar spondylosis,test
+What sunscreen and skincare routine do you recommend to prevent further worsening of melasma and protect my skin from sun damage?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Melasma,test
+What sunscreen strength or ingredients are best for managing melasma?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Melasma,test
+What underlying conditions or factors could be contributing to my neuropathies? how can they be managed alongside the treatment for neuropathy?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Neuropathies,test
+How do you investigate neuropathy?What is the most effective treatment for neuropathies?Is neuropathies a lifelong problem?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Neuropathies,test
+"Are there any precautions or habits I should adopt to prevent future occurrences of otomycosis, especially considering any predisposing factors?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Otomycosis,test
+How do you investigate otomycosis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Otomycosis,test
+"What dietary restrictions or modifications are necessary to manage my child's Phenylketonuria (PKU) effectively, and are there any specific nutritional supplements or formulas that are recommended?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Phenylketonuria (PKU),test
+"If my child is diagnosed with PKU, what are the different treatment options available, and how soon can we start them to minimize developmental delays?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Phenylketonuria (PKU),test
+Are there any lifestyle modifications that can help slow down the progression of presbyopia?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Presbyopia,test
+"Could there be any underlying health conditions contributing to my presbyopia, and how can I address or manage them alongside treating the vision issue?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Presbyopia,test
+What skincare routine or products can I use to prevent razor bumps and manage pseudofolliculitis barbae effectively?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Pseudofolliculitis Barbae,test
+Are there any lifestyle changes or grooming techniques I should adopt to prevent future occurrences of Pseudofolliculitis Barbae?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Pseudofolliculitis Barbae,test
+Is a pterygium cancerous or benign?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Pterygium,test
+"What are the options available for addressing Rhinoplasty dissatisfaction, and what are the potential risks and benefits associated with each option?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Rhinoplasty dissatisfaction,test
+Are there complications associated with second Rhinoplasty operation?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Rhinoplasty dissatisfaction,test
+Do all rotator cuff tears need to be repaired?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Rotator Cuff Tear,test
+What are the non-surgical options for treating a rotator cuff tear?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Rotator Cuff Tear,test
+"Doctor, besides managing the symptoms of dry eyes and dry mouth, what are the potential complications of Sjögren's Syndrome that I should be aware of, and how can I best address or prevent them?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Sjögren's Syndrome,test
+How can I manage the symptoms of Sjögren's Syndrome on a daily basis and maintain my quality of life?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Sjögren's Syndrome,test
+How can we prevent future sports injuries during play?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Sports Injuries,test
+"If sports injury happens when you are young , will it gives you problem when you are older?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Sports Injuries,test
+"What are the possible causes or risk factors for stillbirth, and are there any steps I can take to reduce the risk of experiencing another stillbirth in the future?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Stillbirth,test
+"After this stillbirth, am I likely to experience another one?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Stillbirth,test
+Are there any lifestyle modifications or coping strategies I can implement to help manage my tinnitus symptoms and improve my quality of life?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Tinnitus,test
+“Are there any underlying medical conditions or medications that could be contributing to my tinnitus?”,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Tinnitus,test
+Is Vertigo a brain problem?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Vertigo,test
+How can I effectively manage and alleviate symptoms of vertigo?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Vertigo,test
+How do I repair my laptop?,non_medical,assignment brief,brief example,test
+Who won the football match?,non_medical,assignment brief,brief example,test
+How can I cook rice?,non_medical,assignment brief,brief example,test
