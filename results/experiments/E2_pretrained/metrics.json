@@ -1,0 +1,25 @@
+{
+  "name": "E2_pretrained",
+  "description": "Pretrained multi-qa-MiniLM-L6-cos-v1 embeddings, no fine-tuning",
+  "method": "embedding",
+  "model": "sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+  "index": "answers",
+  "val": {
+    "recall@1": 0.6241,
+    "recall@3": 0.7943,
+    "mrr": 0.711,
+    "questions": 141
+  },
+  "test": {
+    "recall@1": 0.3164,
+    "recall@3": 0.4237,
+    "mrr": 0.3882,
+    "questions": 354
+  },
+  "paraphrase": {
+    "recall@1": 0.475,
+    "recall@3": 0.6,
+    "mrr": 0.5522,
+    "questions": 40
+  }
+}
