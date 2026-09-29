@@ -1,9 +1,4 @@
-"""Light text cleaning shared by data preparation and the web app.
-
-The cleaning only removes noise that is not part of the medical content. It deliberately does not lowercase the
-text, remove stop words or apply stemming, because the Transformer model needs complete sentences and the TF-IDF
-vectorizer lowercases the text on its own.
-"""
+"""This module removes noise such as answer prefixes, exam marks and leaked answers but keeps the medical wording."""
 import re
 
 NBSP = " "  # A non-breaking space, which appears in some records.
@@ -36,13 +31,7 @@ def clean_answer(text: str) -> str:
 
 
 def strip_leaked_answer(question: str, answer: str) -> str:
-    """Remove answer text that was accidentally pasted at the end of a question.
-
-    The function must run on the raw question, before its line breaks are removed. It handles three cases found in
-    the data: text after the question mark that belongs to the answer ("...in Africa? Rheumatic heart disease, ..."),
-    a leftover multiple-choice letter ("...in Africa? A"), and an answer written on the last line of the question
-    ("...carcinoma of thyroid." followed by a line containing "MEN 2").
-    """
+    """Remove answer text left in a raw question after the question mark, as an option letter or on the last line."""
     if "?" in question:
         head, tail = question.rsplit("?", 1)
         tail = normalize_whitespace(tail)
