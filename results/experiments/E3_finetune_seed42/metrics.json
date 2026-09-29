@@ -1,0 +1,25 @@
+{
+  "name": "E3_finetune_seed42",
+  "description": "Fine-tuned (MNRL): lr 2e-5, batch 32, best of 5 epochs, seed 42",
+  "method": "embedding",
+  "model": "models/E3_finetune_seed42",
+  "index": "answers",
+  "val": {
+    "recall@1": 0.7518,
+    "recall@3": 0.8865,
+    "mrr": 0.8267,
+    "questions": 141
+  },
+  "test": {
+    "recall@1": 0.2797,
+    "recall@3": 0.4011,
+    "mrr": 0.367,
+    "questions": 354
+  },
+  "paraphrase": {
+    "recall@1": 0.45,
+    "recall@3": 0.6,
+    "mrr": 0.5343,
+    "questions": 40
+  }
+}
