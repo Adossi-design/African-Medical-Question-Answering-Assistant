@@ -1,4 +1,4 @@
-"""Paths and fixed settings shared by the notebooks and the web app."""
+"""This module defines the file paths and fixed settings shared by the notebooks and the web app."""
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
