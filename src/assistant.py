@@ -1,11 +1,4 @@
-"""The question answering assistant used by the web app.
-
-A user's question is cleaned, turned into an embedding and compared with every answer in the knowledge base. The
-best score then goes through the confidence check in `decide`, which notebook 04 also uses, and the assistant
-returns either the human-written answer or a refusal message. Everything the assistant needs is stored in one
-folder, `models/final` by default: the fine-tuned model files, `assistant_config.json` with the thresholds, and
-`knowledge_base.csv` with the cleaned AfriMed-QA questions and answers.
-"""
+"""This module returns the closest human-written answer to a question or refuses it when the confidence check fails."""
 import json
 import re
 from pathlib import Path
@@ -29,7 +22,7 @@ def decide(score: float, answer_threshold: float, scope_threshold: float) -> str
 
 
 class MedicalAssistant:
-    """Loads the final model, thresholds and knowledge base, and answers one question at a time."""
+    """This class loads the final model, the thresholds and the knowledge base and answers one question at a time."""
 
     def __init__(self, folder: str | Path):
         folder = Path(folder)
