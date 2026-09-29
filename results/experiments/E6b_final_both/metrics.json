@@ -1,0 +1,25 @@
+{
+  "name": "E6b_final_both",
+  "description": "Final fine-tuned model, compared with dataset questions and answers (higher similarity kept)",
+  "method": "embedding",
+  "model": "models/E5_bs64_seed42",
+  "index": "both",
+  "val": {
+    "recall@1": 0.383,
+    "recall@3": 0.6241,
+    "mrr": 0.5478,
+    "questions": 141
+  },
+  "test": {
+    "recall@1": 0.1893,
+    "recall@3": 0.2655,
+    "mrr": 0.2646,
+    "questions": 354
+  },
+  "paraphrase": {
+    "recall@1": 0.65,
+    "recall@3": 0.8,
+    "mrr": 0.7325,
+    "questions": 40
+  }
+}
