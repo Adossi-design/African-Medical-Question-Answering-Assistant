@@ -1,11 +1,4 @@
-"""Retrieval components shared by the notebooks and the web app.
-
-The assistant answers a question in four steps. Every answer in the knowledge base is turned into a vector once,
-the user's question is turned into a vector in the same way, the cosine similarity between the question and every
-answer is computed, and the most similar answer is returned unless its similarity is too low. The two retrievers
-below differ only in how a text becomes a vector: TF-IDF uses weighted word counts and has no notion of meaning,
-while the embedding retriever uses a Transformer model that places texts with similar meanings close together.
-"""
+"""This module represents texts as TF-IDF vectors or sentence embeddings and ranks answers by cosine similarity."""
 import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -20,7 +13,7 @@ def load_knowledge_base() -> pd.DataFrame:
 
 
 class TfidfRetriever:
-    """The baseline, which turns each text into a sparse vector of TF-IDF word weights."""
+    """This class is the baseline retriever, which represents each text as a sparse vector of TF-IDF weights."""
 
     name = "tfidf"
 
@@ -38,11 +31,7 @@ class TfidfRetriever:
 
 
 class EmbeddingRetriever:
-    """Turns each text into a 384-number embedding with a Sentence-Transformer model.
-
-    When `kb_questions` is given, the user's question is compared with each record's dataset question as well as
-    its answer, and the higher of the two similarities is kept. Otherwise only the answers are used.
-    """
+    """This class represents each text as a 384-number embedding and can also compare with dataset questions."""
 
     def __init__(self, model, answers: list[str], kb_questions: list[str] | None = None,
                  max_seq_length: int = 512, batch_size: int = 64):
@@ -71,10 +60,7 @@ class EmbeddingRetriever:
 
 
 def gold_ranks(scores: np.ndarray, gold: np.ndarray) -> np.ndarray:
-    """Return the rank of the correct answer for each question, where 1 is the best.
-
-    Ties count against the model, so a question that matches nothing does not receive rank 1 by luck.
-    """
+    """Return the rank of each correct answer, where 1 is the best rank and ties count against the model."""
     gold_scores = scores[np.arange(len(gold)), gold][:, None]
     return 1 + (scores > gold_scores).sum(axis=1) + (scores == gold_scores).sum(axis=1) - 1
 
