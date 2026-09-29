@@ -1,8 +1,4 @@
-"""Evaluation helpers shared by the notebooks.
-
-Every question is searched against the full knowledge base of unique answers, exactly as in the web app, and it
-counts as correct at rank 1 when its own human-written answer is ranked first.
-"""
+"""This module ranks every knowledge-base answer for each question and saves the resulting metrics and predictions."""
 import json
 
 import numpy as np
@@ -15,7 +11,7 @@ SPLITS = ["val", "test", "paraphrase"]  # The paraphrases are 40 reworded valida
 
 
 def load_queries(split: str) -> tuple[pd.DataFrame, bool]:
-    """Return the questions to evaluate and whether they are dataset questions rather than paraphrases."""
+    """Return the questions of one set with a flag that is true for dataset questions and false for paraphrases."""
     if split != "paraphrase":
         return pd.read_csv(PROCESSED_DIR / f"{split}.csv").assign(source_split=split), True
     para = pd.read_csv(PROBE_DIR / "paraphrases.csv")
