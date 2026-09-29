@@ -1,0 +1,6 @@
+{
+  "final_model": "models/E5_bs64_seed42",
+  "selected_by": "highest validation MRR among fine-tuned runs",
+  "val_mrr": 0.8371,
+  "test_mrr": 0.3719
+}
