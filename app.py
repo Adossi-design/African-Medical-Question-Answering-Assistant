@@ -1,8 +1,4 @@
-"""Gradio web interface for the African Medical Question Answering Assistant.
-
-Run `python app.py` from the project root and open http://127.0.0.1:7860. The interface only formats the input and
-the output, while all of the NLP work happens in src/assistant.py.
-"""
+"""This module provides the Gradio web interface, while all language processing takes place in src/assistant.py."""
 import os
 
 import gradio as gr
