@@ -1,11 +1,4 @@
-"""Publish the web app and the final model to a Hugging Face Space.
-
-Before the first upload, the account owner installs `huggingface_hub` with pip and runs `huggingface-cli login`
-with a token that has write permission (created at huggingface.co/settings/tokens). Then, from the project root and
-after notebook 04 has exported `models/final/`, run:
-
-    python deploy/upload_to_space.py --space <your-username>/african-medical-qa-assistant
-"""
+"""This script uploads the web app, the shared source modules and the exported final model to a Hugging Face Space."""
 import argparse
 import shutil
 import tempfile
