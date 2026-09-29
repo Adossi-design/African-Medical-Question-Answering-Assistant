@@ -1,0 +1,25 @@
+{
+  "name": "E4b_lr1e-5_seed42",
+  "description": "Learning rate 1e-5 instead of 2e-5 (gentler)",
+  "method": "embedding",
+  "model": "models/E4b_lr1e-5_seed42",
+  "index": "answers",
+  "val": {
+    "recall@1": 0.7518,
+    "recall@3": 0.8865,
+    "mrr": 0.826,
+    "questions": 141
+  },
+  "test": {
+    "recall@1": 0.2853,
+    "recall@3": 0.4266,
+    "mrr": 0.3755,
+    "questions": 354
+  },
+  "paraphrase": {
+    "recall@1": 0.45,
+    "recall@3": 0.6,
+    "mrr": 0.5371,
+    "questions": 40
+  }
+}
