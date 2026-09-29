@@ -1,0 +1,25 @@
+{
+  "name": "E6a_pretrained_both",
+  "description": "Pretrained model, compared with dataset questions and answers (higher similarity kept)",
+  "method": "embedding",
+  "model": "sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+  "index": "both",
+  "val": {
+    "recall@1": 0.227,
+    "recall@3": 0.4113,
+    "mrr": 0.3709,
+    "questions": 141
+  },
+  "test": {
+    "recall@1": 0.226,
+    "recall@3": 0.2825,
+    "mrr": 0.285,
+    "questions": 354
+  },
+  "paraphrase": {
+    "recall@1": 0.675,
+    "recall@3": 0.8,
+    "mrr": 0.7442,
+    "questions": 40
+  }
+}
