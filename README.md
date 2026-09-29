@@ -130,6 +130,12 @@ python app.py                               # Opens the web app at http://127.0.
 
 The notebooks can also be opened and run in VS Code, Jupyter or Google Colab. The web app needs the `models/final/` folder, which notebook 04 creates.
 
+To publish the web app on Hugging Face Spaces, first install `huggingface_hub` with pip and log in with `huggingface-cli login`, using a token with write permission from huggingface.co/settings/tokens. After notebook 04 has exported `models/final/`, the following command uploads the app, the source modules and the final model to the Space.
+
+```bash
+python deploy/upload_to_space.py --space <your-username>/african-medical-qa-assistant
+```
+
 ## Repository Structure
 
 ```
