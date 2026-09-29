@@ -1,0 +1,25 @@
+{
+  "name": "E1_tfidf",
+  "description": "Baseline: TF-IDF (unigrams+bigrams, English stop-words removed) + cosine similarity",
+  "method": "tfidf",
+  "model": "",
+  "index": "answers",
+  "val": {
+    "recall@1": 0.5532,
+    "recall@3": 0.7092,
+    "mrr": 0.6564,
+    "questions": 141
+  },
+  "test": {
+    "recall@1": 0.2373,
+    "recall@3": 0.3249,
+    "mrr": 0.2941,
+    "questions": 354
+  },
+  "paraphrase": {
+    "recall@1": 0.075,
+    "recall@3": 0.25,
+    "mrr": 0.2113,
+    "questions": 40
+  }
+}
