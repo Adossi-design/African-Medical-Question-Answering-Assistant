@@ -1,3 +1,2 @@
-# Keep CSV files byte-for-byte identical (no Windows line-ending conversion).
-# Several AfriMed-QA answers contain \r\n inside quoted fields.
+# CSV files stay byte-identical because several AfriMed-QA answers contain Windows line breaks inside quoted fields.
 *.csv -text
