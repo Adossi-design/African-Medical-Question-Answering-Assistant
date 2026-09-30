@@ -1,5 +1,4 @@
 """This module ranks every knowledge-base answer for each question and saves the resulting metrics and predictions."""
-import json
 
 import numpy as np
 import pandas as pd
@@ -53,7 +52,7 @@ def evaluate_split(retriever, kb: pd.DataFrame, split: str) -> tuple[dict, pd.Da
 
 
 def run_experiment(name: str, retriever, kb: pd.DataFrame, description: str, **info) -> dict:
-    """Evaluate one retriever on all three sets and save its predictions, metrics and summary row."""
+    """Evaluate one retriever on all three sets and save its predictions and its row in the experiments table."""
     out_dir = RESULTS_DIR / "experiments" / name
     out_dir.mkdir(parents=True, exist_ok=True)
     results = {"name": name, "description": description, **info}
@@ -61,8 +60,6 @@ def run_experiment(name: str, retriever, kb: pd.DataFrame, description: str, **i
         metrics, predictions = evaluate_split(retriever, kb, split)
         results[split] = metrics
         predictions.to_csv(out_dir / f"predictions_{split}.csv", index=False)
-    with open(out_dir / "metrics.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
 
     row = {"name": name, "description": description, **info,
            **{f"{s}_{k}": results[s][k] for s in SPLITS for k in ["recall@1", "recall@3", "mrr"]}}
