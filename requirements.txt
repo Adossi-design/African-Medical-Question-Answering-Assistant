@@ -4,10 +4,16 @@ numpy==2.5.3
 scikit-learn==1.9.0
 scipy==1.18.1
 matplotlib==3.11.1
-torch==2.14.0
 transformers==5.17.0
 sentence-transformers==6.1.0
-gradio==6.28.0
+huggingface_hub==1.33.0
+streamlit==1.64.0
+
+# PyTorch comes from PyPI on Windows and macOS, while Linux servers such as Streamlit Community Cloud use the
+# smaller CPU-only build, since the full Linux build adds several gigabytes of GPU libraries that the app never uses.
+torch==2.14.0 ; sys_platform != "linux"
+torch @ https://download.pytorch.org/whl/cpu/torch-2.14.0%2Bcpu-cp313-cp313-manylinux_2_28_x86_64.whl ; sys_platform == "linux" and python_version == "3.13"
+torch @ https://download.pytorch.org/whl/cpu/torch-2.14.0%2Bcpu-cp312-cp312-manylinux_2_28_x86_64.whl ; sys_platform == "linux" and python_version == "3.12"
 
 # These two packages are needed to run the notebooks in VS Code, Jupyter or from the command line.
 ipykernel==7.3.0
