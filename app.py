@@ -109,7 +109,7 @@ STYLE = f"""
 [data-testid="stChatInput"] > div {{ border: 1px solid {BLUE} !important; border-radius: 2rem !important;
                                      background: #ffffff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }}
 [data-testid="stChatInputTextArea"] {{ background: #ffffff; }}
-[data-testid="stBottomBlockContainer"] {{ padding-bottom: 1.9rem; }}
+[data-testid="stBottomBlockContainer"] {{ padding-bottom: 0.9rem; }}
 
 /* Streamlit Community Cloud adds Fork and GitHub buttons to the header, which the design does not include. */
 [data-testid="stToolbarActions"] {{ display: none; }}
@@ -151,14 +151,14 @@ STYLE = f"""
 .topbar {{ display: none; }}
 
 /* On wide screens the sidebar is permanent, so its collapse control is hidden. */
-@media (min-width: 768px) {{
+@media (min-width: 769px) {{
     [data-testid="stSidebarHeader"] {{ display: none; }}
-    [data-testid="stSidebar"] {{ width: 21rem !important; min-width: 21rem !important; }}
+    [data-testid="stSidebar"][aria-expanded="true"] {{ width: 21rem !important; min-width: 21rem !important; }}
     [data-testid="stMainBlockContainer"] {{ padding-top: 2rem; }}
 }}
 
 /* On narrow screens a top bar replaces the sidebar, and the sidebar opens as a drawer over the chat. */
-@media (max-width: 767px) {{
+@media (max-width: 768px) {{
     .topbar {{ display: flex; position: fixed; top: 0; left: 0; right: 0; height: 3.75rem; z-index: 999989;
                align-items: center; justify-content: center; gap: 0.5rem; background: #f5f6f8;
                border-bottom: 1px solid #e5e7eb; font-size: 1.15rem; font-weight: 700; color: {INK}; }}
@@ -187,7 +187,6 @@ STYLE = f"""
         display: none; }}
     [data-testid="stChatMessageContent"] {{ max-width: 85%; }}
     [data-testid="stBottomBlockContainer"]::after {{ content: "{SHORT_INPUT_NOTE}"; }}
-    [data-testid="stBottomBlockContainer"] {{ padding-bottom: 3.4rem; }}
 }}
 </style>
 """
