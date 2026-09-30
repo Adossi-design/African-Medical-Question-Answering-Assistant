@@ -109,7 +109,10 @@ STYLE = f"""
 [data-testid="stChatInput"] > div {{ border: 1px solid {BLUE} !important; border-radius: 2rem !important;
                                      background: #ffffff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }}
 [data-testid="stChatInputTextArea"] {{ background: #ffffff; }}
-[data-testid="stBottomBlockContainer"] {{ padding-bottom: 0.9rem; }}
+[data-testid="stBottomBlockContainer"] {{ padding-bottom: 1.9rem; }}
+
+/* Streamlit Community Cloud adds Fork and GitHub buttons to the header, which the design does not include. */
+[data-testid="stToolbarActions"] {{ display: none; }}
 [data-testid="stChatInputSubmitButton"] {{ width: 2.75rem; height: 2.75rem; border-radius: 50%;
     background: {BLUE} {SEND} center / 1.2rem no-repeat !important; }}
 [data-testid="stChatInputSubmitButton"] svg {{ visibility: hidden; }}
@@ -184,6 +187,7 @@ STYLE = f"""
         display: none; }}
     [data-testid="stChatMessageContent"] {{ max-width: 85%; }}
     [data-testid="stBottomBlockContainer"]::after {{ content: "{SHORT_INPUT_NOTE}"; }}
+    [data-testid="stBottomBlockContainer"] {{ padding-bottom: 3.4rem; }}
 }}
 </style>
 """
