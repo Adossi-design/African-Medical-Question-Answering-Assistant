@@ -24,7 +24,6 @@ SHORT_INPUT_NOTE = "Educational information only. Check health decisions with a 
 FOLLOW_UP = " Please consult a qualified healthcare professional for further guidance."
 TRADITIONAL_NOTE = ("This answer describes a traditional practice reported by dataset contributors. "
                     "Its safety and effectiveness may not be scientifically established.")
-FILES_NOT_READ = "I can only read typed questions, so attached files are not used. Please type your medical question."
 EXAMPLES = [
     "How is uncomplicated malaria treated in Africa?",
     "How does cholera spread?",
@@ -35,10 +34,10 @@ EXAMPLES = [
 BLUE, GREEN, DARK_GREEN, ORANGE, INK = "#1f73d8", "#2e8b6a", "#1d5b48", "#d8891f", "#1f2937"
 
 
-def svg(body: str, viewbox: str = "0 0 24 24") -> str:
+def svg(body: str) -> str:
     """Return a CSS image made from the inner markup of a small SVG icon."""
     body = body.replace("#", "%23")
-    return f"url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='{viewbox}'>{body}</svg>\")"
+    return f"url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>{body}</svg>\")"
 
 
 def filled(path: str, colour: str) -> str:
@@ -65,8 +64,6 @@ CLOSE = filled("M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19
 BUBBLE = outlined("<path d='M7.9 20A9 9 0 1 0 4 16.1L2 22Z'/>", "#374151")
 SHIELD = outlined("<path d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5"
                   "-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'/>", ORANGE)
-PAPERCLIP = outlined("<path d='m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2"
-                     " 0 0 1-2.83-2.83l8.49-8.48'/>", "#6b7280")
 
 # The style sheet reproduces the approved design for desktop, tablet and phone on top of the Streamlit components.
 STYLE = f"""
@@ -104,22 +101,20 @@ STYLE = f"""
 [data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) [data-testid="stIconMaterial"] {{
     color: transparent !important; width: 1.5rem; height: 1.5rem; background: {PERSON} center / contain no-repeat; }}
 
-/* The message composer is a rounded bar with a paperclip on the left and a round send button on the right. */
+/* The message composer is a rounded bar with a round send button on the right and a short note underneath. */
 [data-testid="stChatInput"] {{ border: none; background: transparent; }}
 [data-testid="stChatInput"] > div {{ border: 1px solid {BLUE} !important; border-radius: 2rem !important;
                                      background: #ffffff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }}
 [data-testid="stChatInputTextArea"] {{ background: #ffffff; }}
-[data-testid="stBottomBlockContainer"] {{ padding-bottom: 0.9rem; }}
-
-/* Streamlit Community Cloud adds Fork and GitHub buttons to the header, which the design does not include. */
-[data-testid="stToolbarActions"] {{ display: none; }}
 [data-testid="stChatInputSubmitButton"] {{ width: 2.75rem; height: 2.75rem; border-radius: 50%;
     background: {BLUE} {SEND} center / 1.2rem no-repeat !important; }}
 [data-testid="stChatInputSubmitButton"] svg {{ visibility: hidden; }}
-[data-testid="stChatInputFileUploadButton"] {{ background: {PAPERCLIP} center / 1.2rem no-repeat !important; }}
-[data-testid="stChatInputFileUploadButton"] svg, [data-testid="stChatInputFileUploadButton"] span {{ visibility: hidden; }}
+[data-testid="stBottomBlockContainer"] {{ padding-bottom: 0.9rem; }}
 [data-testid="stBottomBlockContainer"]::after {{ content: "{INPUT_NOTE}"; display: block; text-align: center;
     font-size: 0.75rem; color: #6b7280; padding-top: 0.55rem; }}
+
+/* Streamlit Community Cloud adds Fork and GitHub buttons to the header, which the design does not include. */
+[data-testid="stToolbarActions"] {{ display: none; }}
 
 /* The sidebar holds the brand, the new chat card, the example cards and the two information boxes. */
 [data-testid="stSidebarUserContent"] {{ padding-top: 1.4rem; }}
@@ -206,12 +201,12 @@ def respond(assistant: MedicalAssistant, question: str) -> dict:
     if result["decision"] == "answer":
         return {"role": "assistant",
                 "content": result["answer"].replace("\n", "  \n"),  # Keep the line breaks of list-style answers.
-                "notes": [TRADITIONAL_NOTE] if result["traditional_remedy"] else [],
+                "caution": result["traditional_remedy"],
                 "debug": (f"Closest question in the knowledge base: {result['matched_question']}  \n"
                           f"Similarity: {result['score']:.2f} ({thresholds}) · Source: {result['source']}")}
     content = result["message"] + (FOLLOW_UP if result["decision"] == "not_enough_information" else "")
     debug = f"Best similarity found: {result['score']:.2f} ({thresholds})" if "score" in result else None
-    return {"role": "assistant", "content": content, "notes": [], "debug": debug}
+    return {"role": "assistant", "content": content, "caution": False, "debug": debug}
 
 
 def show(message: dict):
@@ -219,8 +214,8 @@ def show(message: dict):
     avatar = ":material/person:" if message["role"] == "user" else ":material/stethoscope:"
     with st.chat_message(message["role"], avatar=avatar):
         st.markdown(message["content"])
-        for note in message.get("notes", []):
-            st.caption(f":material/info: {note}")
+        if message.get("caution"):
+            st.caption(f":material/info: {TRADITIONAL_NOTE}")
         if DEBUG_MODE and message.get("debug"):
             st.caption(message["debug"])
 
@@ -261,26 +256,17 @@ with st.sidebar:
                     f"</span><div><div class='info-title'>Disclaimer</div><div class='info-text'>{DISCLAIMER}</div>"
                     "</div></div>", unsafe_allow_html=True)
 
-submitted = st.chat_input("Ask a medical question", accept_file=True)
-question, files = st.session_state.pop("pending", None), []
-if submitted is not None:
-    question, files = (submitted.text or "").strip(), list(submitted.files or [])
+question = st.chat_input("Ask a medical question") or st.session_state.pop("pending", None)
 
-if not st.session_state.messages and not (question or files):
+if not st.session_state.messages and not question:
     st.markdown("<h2 style='text-align: center; margin-top: 30vh; font-weight: 700;'>How can I help you today?</h2>",
                 unsafe_allow_html=True)
 for message in st.session_state.messages:
     show(message)
-if question or files:
-    shown = question or "Attached file: " + ", ".join(file.name for file in files)
-    user_message = {"role": "user", "content": shown}
+if question:
+    user_message = {"role": "user", "content": question}
     st.session_state.messages.append(user_message)
     show(user_message)
-    if question:
-        answer = respond(assistant, question)
-        if files:
-            answer["notes"].append("Only your typed question was used, because attached files are not read.")
-    else:
-        answer = {"role": "assistant", "content": FILES_NOT_READ, "notes": [], "debug": None}
+    answer = respond(assistant, question)
     st.session_state.messages.append(answer)
     show(answer)
