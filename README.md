@@ -78,7 +78,9 @@ The assistant answers a question in four steps:
 1. The question is lightly cleaned, in the same way as the dataset questions.
 2. The fine-tuned model turns the question into a 384-number embedding.
 3. The embedding is compared with the embeddings of all 1,205 answers in the knowledge base using cosine similarity.
-4. The best similarity decides the response. At 0.52 or above, the assistant shows the answer together with the dataset question it belongs to. Between 0.32 and 0.52, it replies that it does not have enough reliable information, and below 0.32 it replies that the question is outside its scope.
+4. The best similarity decides the response. At 0.52 or above, the assistant shows the human-written answer. Between 0.32 and 0.52, it replies that it does not have enough reliable information, and below 0.32 it replies that the question is outside its scope.
+
+The web app is a chat interface built with Streamlit, and it shows users only the answer or the refusal message. The matched dataset question, the similarity score and the source of the record are still computed for every question, and setting `DEBUG_MODE = True` at the top of `app.py` displays them under each reply, which is useful when checking the thresholds.
 
 The baseline is a TF-IDF model with unigrams and bigrams, compared with the answers through cosine similarity. The main model is [`sentence-transformers/multi-qa-MiniLM-L6-cos-v1`](https://huggingface.co/sentence-transformers/multi-qa-MiniLM-L6-cos-v1), a six-layer MiniLM model with 22.7 million parameters, which we fine-tuned on the 711 training question and answer pairs with the Multiple Negatives Ranking loss and the AdamW optimiser, keeping the epoch with the best validation score. The two confidence thresholds were chosen on the validation set together with real questions that should be refused: non-medical questions from SQuAD 2.0 and AfriMed-QA consumer questions about diseases that never appear in the knowledge base. The final model is E5, the fine-tuned run with a batch size of 64, which had the highest validation MRR.
 
@@ -125,22 +127,26 @@ python -m venv .venv
 .venv\Scripts\activate                      # On Linux or macOS: source .venv/bin/activate
 pip install -r requirements.txt
 python -m nbconvert --to notebook --execute --inplace notebooks/01_data_preparation.ipynb
-python app.py                               # Opens the web app at http://127.0.0.1:7860
+streamlit run app.py                        # Opens the chat app at http://localhost:8501
 ```
 
 The notebooks can also be opened and run in VS Code, Jupyter or Google Colab. The web app needs the `models/final/` folder, which notebook 04 creates.
 
-To publish the web app on Hugging Face Spaces, first install `huggingface_hub` with pip and log in with `huggingface-cli login`, using a token with write permission from huggingface.co/settings/tokens. After notebook 04 has exported `models/final/`, the following command uploads the app, the source modules and the final model to the Space.
+The hosted app runs on Streamlit Community Cloud directly from this repository. Because the trained model is too large for Git, `deploy/upload_model.py` publishes the contents of `models/final/` to the Hugging Face model repository [Fred-William/african-medical-qa-assistant](https://huggingface.co/Fred-William/african-medical-qa-assistant), and `app.py` downloads it from there whenever the local folder is missing. After re-running the notebooks, the hosted model can be updated by logging in with a Hugging Face token that has write permission and running the upload script.
 
 ```bash
-python deploy/upload_to_space.py --space <your-username>/african-medical-qa-assistant
+python -c "from huggingface_hub import login; login()"
+python deploy/upload_model.py --repo <your-username>/african-medical-qa-assistant
 ```
+
+To publish the app itself, sign in at [share.streamlit.io](https://share.streamlit.io) with GitHub, create an app from this repository with `main` as the branch and `app.py` as the main file, and choose Python 3.13 in the advanced settings. On Linux, `requirements.txt` installs the CPU-only build of PyTorch, which keeps the installation small enough for the free hosting.
 
 ## Repository Structure
 
 ```
 notebooks/          the full workflow, from notebook 01 to notebook 05
-app.py              Gradio web interface, which calls src/assistant.py
+app.py              Streamlit chat interface, which calls src/assistant.py
+.streamlit/         theme and server settings of the chat interface
 src/                small modules shared by the notebooks and the web app
   config.py         paths and fixed settings such as the random seed and the base model
   text_cleaning.py  light cleaning applied to dataset questions and user questions
@@ -151,7 +157,7 @@ data/raw/           the original AfriMed-QA v2.5 file
 data/processed/     cleaned records, the three sets and the removed records with reasons
 data/probes/        paraphrased questions and questions that should be refused
 results/            metrics, predictions and figures
-deploy/             requirements and upload script for publishing the app on Hugging Face Spaces
+deploy/             script that uploads the final model to Hugging Face for the hosted app
 report/             the project report
 models/             trained models, which are not stored in Git
 ```
@@ -166,7 +172,7 @@ The data and evaluation also have limits. Only 50 of the 1,236 SAQ records carry
 
 ## Acknowledgements
 
-This project uses the AfriMed-QA dataset created by Intron Health and its collaborators, the Sentence-Transformers, Hugging Face Transformers, PyTorch, scikit-learn and Gradio libraries, and SQuAD 2.0, which served only as a source of non-medical test questions. The full list of references is given in the report.
+This project uses the AfriMed-QA dataset created by Intron Health and its collaborators, the Sentence-Transformers, Hugging Face Transformers, PyTorch, scikit-learn and Streamlit libraries, and SQuAD 2.0, which served only as a source of non-medical test questions. The full list of references is given in the report.
 
 ## References
 
