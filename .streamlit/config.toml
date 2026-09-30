@@ -1,0 +1,27 @@
+# These Streamlit settings apply both locally and on Streamlit Community Cloud.
+[server]
+# The file watcher is turned off because it scans unused parts of the transformers library and fills the log with errors.
+fileWatcherType = "none"
+
+[logger]
+# Only real errors are logged, because Streamlit warns about unused parts of the transformers library when it starts.
+level = "error"
+
+[client]
+# The toolbar shows only the options a visitor needs, as on a normal chat website.
+toolbarMode = "minimal"
+
+[theme]
+# The chat uses a white page, the rounded Nunito font, dark slate text and a blue accent.
+base = "light"
+primaryColor = "#1f73d8"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f5f6f8"
+textColor = "#1f2937"
+font = "Nunito:https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+baseRadius = "0.75rem"
+showSidebarBorder = true
+
+[theme.sidebar]
+# The sidebar is a light grey that sets it apart from the white conversation area.
+backgroundColor = "#f5f6f8"
