@@ -69,9 +69,8 @@ SHIELD = outlined("<path d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 2
 STYLE = f"""
 <style>
 /* Shared icon styles let small SVG images and Material Symbols sit inline with text. */
-.icon {{ font-family: 'Material Symbols Rounded'; font-weight: normal; font-style: normal; line-height: 1;
-         display: inline-block; vertical-align: middle; }}
-.svg-icon {{ display: inline-block; flex: 0 0 auto; background: center / contain no-repeat; }}
+.icon {{ font-family: 'Material Symbols Rounded'; font-weight: normal; line-height: 1; }}
+.svg-icon {{ flex-shrink: 0; background: center / contain no-repeat; }}
 .icon-info {{ background-image: {INFO}; }}
 .icon-shield {{ background-image: {SHIELD}; }}
 
@@ -80,10 +79,9 @@ STYLE = f"""
 [data-testid="stHeader"] {{ background: transparent; }}
 
 /* Chat rows place an avatar beside a rounded bubble, on the right for the user and on the left for the assistant. */
-[data-testid="stChatMessage"] {{ background: transparent; padding: 0; margin: 0.8rem 0; gap: 0.85rem;
-                                 align-items: flex-start; }}
-[data-testid="stChatMessageContent"] {{ flex: 0 1 auto; width: fit-content; max-width: 70%; margin: 0 !important;
-                                         border-radius: 1rem; padding: 0.7rem 1.15rem; color: {INK}; }}
+[data-testid="stChatMessage"] {{ background: transparent; padding: 0; margin: 0.8rem 0; gap: 0.85rem; }}
+[data-testid="stChatMessageContent"] {{ flex-grow: 0; max-width: 70%; margin: 0 !important; border-radius: 1rem;
+                                         padding: 0.7rem 1.15rem; }}
 [data-testid="stChatMessageContent"] [data-testid="stMarkdownContainer"],
 [data-testid="stChatMessageContent"] p:last-child {{ margin-bottom: 0; }}
 [data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) {{ flex-direction: row-reverse; }}
@@ -91,8 +89,7 @@ STYLE = f"""
     background: #e9effb; }}
 [data-testid="stChatMessage"]:has([aria-label="Chat message from assistant"]) [data-testid="stChatMessageContent"] {{
     background: #f1f2f4; }}
-[data-testid="stChatMessageAvatarCustom"] {{ width: 2.45rem; height: 2.45rem; border-radius: 50%; border: none;
-                                             display: flex; align-items: center; justify-content: center; }}
+[data-testid="stChatMessageAvatarCustom"] {{ width: 2.45rem; height: 2.45rem; border-radius: 50%; border: none; }}
 [data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) [data-testid="stChatMessageAvatarCustom"] {{
     background: {BLUE}; }}
 [data-testid="stChatMessage"]:has([aria-label="Chat message from assistant"]) [data-testid="stChatMessageAvatarCustom"] {{
@@ -102,7 +99,6 @@ STYLE = f"""
     color: transparent !important; width: 1.5rem; height: 1.5rem; background: {PERSON} center / contain no-repeat; }}
 
 /* The message composer is a rounded bar with a round send button on the right and a short note underneath. */
-[data-testid="stChatInput"] {{ border: none; background: transparent; }}
 [data-testid="stChatInput"] > div {{ border: 1px solid {BLUE} !important; border-radius: 2rem !important;
                                      background: #ffffff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }}
 [data-testid="stChatInputTextArea"] {{ background: #ffffff; }}
@@ -116,60 +112,62 @@ STYLE = f"""
 /* Streamlit Community Cloud adds Fork and GitHub buttons to the header, which the design does not include. */
 [data-testid="stToolbarActions"] {{ display: none; }}
 
-/* The sidebar holds the brand, the new chat card, the example cards and the two information boxes. */
-[data-testid="stSidebarUserContent"] {{ padding-top: 1.4rem; }}
+/* The sidebar is a compact fixed column with the brand, the new chat card, the examples and two information boxes. */
+[data-testid="stSidebarResizeHandle"] {{ display: none; }}
+[data-testid="stSidebarContent"] {{ padding: 0 1rem; }}
+[data-testid="stSidebarUserContent"] {{ padding: 1rem 0 !important; }}
 [data-testid="stSidebarUserContent"] [data-testid="stMarkdownContainer"] {{ margin-bottom: 0; }}
-[data-testid="stSidebarUserContent"] > div > [data-testid="stVerticalBlock"] {{ gap: 0.55rem; min-height: calc(100vh - 3rem); }}
-.brand {{ display: flex; gap: 0.6rem; align-items: flex-start; margin-bottom: 0.6rem; }}
-.brand .icon {{ color: {GREEN}; font-size: 2rem; margin-top: 0.05rem; }}
-.brand-title {{ font-size: 1.3rem; font-weight: 700; color: {INK}; line-height: 1.25; }}
-.brand-subtitle {{ font-size: 0.85rem; color: #6b7280; line-height: 1.35; margin-top: 0.1rem; }}
-[data-testid="stSidebar"] button[kind="secondary"] {{ background: #ffffff; border: 1px solid #e3e6ea; color: {INK};
-    border-radius: 0.6rem; justify-content: flex-start; text-align: left; padding: 0.6rem 0.9rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }}
-[data-testid="stSidebar"] button[kind="secondary"] > div {{ justify-content: flex-start !important; gap: 0.7rem; }}
-[data-testid="stSidebar"] button[kind="secondary"] p {{ text-align: left; font-size: 0.87rem; }}
-.st-key-new_chat button {{ padding: 0.7rem 0.9rem !important; }}
-.st-key-new_chat button p {{ font-weight: 700; font-size: 0.95rem !important; }}
-.st-key-new_chat [data-testid="stIconMaterial"] {{ color: transparent !important; width: 1.3rem; height: 1.3rem;
+[data-testid="stSidebarUserContent"] > div > [data-testid="stVerticalBlock"] {{ gap: 0.45rem; min-height: calc(100vh - 2rem); }}
+.brand {{ display: flex; gap: 0.5rem; margin-bottom: 0.4rem; }}
+.brand .icon {{ color: {GREEN}; font-size: 1.8rem; margin-top: 0.05rem; }}
+.brand-title {{ font-size: 1.15rem; font-weight: 700; line-height: 1.25; }}
+.brand-subtitle {{ font-size: 0.8rem; color: #6b7280; line-height: 1.35; margin-top: 0.1rem; }}
+[data-testid="stSidebar"] button[kind="secondary"] {{ background: #ffffff; border: 1px solid #e3e6ea; border-radius: 0.6rem;
+    padding: 0.5rem 0.75rem; min-height: 0; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }}
+[data-testid="stSidebar"] button[kind="secondary"] > div {{ justify-content: flex-start !important; }}
+[data-testid="stSidebar"] button[kind="secondary"] p {{ font-size: 0.82rem; text-align: left; }}
+.st-key-new_chat button {{ padding: 0.6rem 0.75rem !important; }}
+.st-key-new_chat button p {{ font-weight: 700; font-size: 0.9rem !important; }}
+.st-key-new_chat [data-testid="stIconMaterial"] {{ color: transparent !important;
     background: {ADD_CIRCLE} center / contain no-repeat; }}
-[class*="st-key-example_"] [data-testid="stIconMaterial"] {{ color: transparent !important; width: 1rem; height: 1rem;
+[class*="st-key-example_"] [data-testid="stIconMaterial"] {{ color: transparent !important;
     background: {BUBBLE} center / contain no-repeat; }}
-.section-label {{ font-size: 0.85rem; color: #6b7280; margin: 0.5rem 0 0.1rem; }}
+.section-label {{ font-size: 0.8rem; color: #6b7280; margin: 0.35rem 0 0; }}
 [data-testid="stLayoutWrapper"]:has(> .st-key-sidebar_footer) {{ margin-top: auto; }}
-.info-box {{ border-radius: 0.6rem; padding: 0.8rem 0.9rem; display: flex; gap: 0.65rem; margin-top: 0.25rem; }}
+.info-box {{ border-radius: 0.6rem; padding: 0.65rem 0.75rem; display: flex; gap: 0.55rem; margin-top: 0.2rem; }}
 .info-box.about {{ background: #edf2fb; border: 1px solid #dbe4f3; }}
 .info-box.disclaimer {{ background: #fff6e8; border: 1px solid #f5e0bf; }}
-.info-box .svg-icon {{ width: 1.1rem; height: 1.1rem; margin-top: 0.1rem; }}
-.info-title {{ font-weight: 700; font-size: 0.9rem; color: {INK}; }}
-.info-text {{ font-size: 0.82rem; color: #4b5563; line-height: 1.45; margin-top: 0.15rem; }}
-.topbar {{ display: none; }}
+.info-box .svg-icon {{ width: 1rem; height: 1rem; margin-top: 0.1rem; }}
+.info-title {{ font-weight: 700; font-size: 0.85rem; color: {INK}; }}
+.info-text {{ font-size: 0.78rem; color: #4b5563; line-height: 1.4; margin-top: 0.1rem; }}
+.topbar, .st-key-top_new_chat {{ display: none; }}
+.st-key-top_new_chat button {{ min-height: 0; width: 1.7rem; height: 1.7rem; padding: 0; border: none;
+    background: {ADD_CIRCLE} center / contain no-repeat !important; }}
+.st-key-top_new_chat button p, .st-key-top_new_chat [data-testid="stIconMaterial"] {{ font-size: 0; }}
 
 /* On wide screens the sidebar is permanent, so its collapse control is hidden. */
 @media (min-width: 769px) {{
     [data-testid="stSidebarHeader"] {{ display: none; }}
-    [data-testid="stSidebar"][aria-expanded="true"] {{ width: 21rem !important; min-width: 21rem !important; }}
+    [data-testid="stSidebar"][aria-expanded="true"] {{ width: 18rem !important; }}
     [data-testid="stMainBlockContainer"] {{ padding-top: 2rem; }}
 }}
 
 /* On narrow screens a top bar replaces the sidebar, and the sidebar opens as a drawer over the chat. */
 @media (max-width: 768px) {{
     .topbar {{ display: flex; position: fixed; top: 0; left: 0; right: 0; height: 3.75rem; z-index: 999989;
-               align-items: center; justify-content: center; gap: 0.5rem; background: #f5f6f8;
-               border-bottom: 1px solid #e5e7eb; font-size: 1.15rem; font-weight: 700; color: {INK}; }}
-    .topbar .icon {{ color: {GREEN}; font-size: 1.7rem; }}
-    .topbar-new {{ position: absolute; right: 1.1rem; width: 1.6rem; height: 1.6rem;
-                   background: {ADD_CIRCLE} center / contain no-repeat; }}
-    [data-testid="stHeader"] {{ pointer-events: none; z-index: 999990; }}
-    [data-testid="stExpandSidebarButton"] {{ pointer-events: auto; width: 1.8rem; height: 1.8rem;
-        background: {MENU} center / contain no-repeat !important; }}
-    [data-testid="stExpandSidebarButton"] * {{ visibility: hidden; }}
+               align-items: center; justify-content: center; gap: 0.45rem; background: #f5f6f8; padding: 0 3.3rem;
+               border-bottom: 1px solid #e5e7eb; font-size: clamp(0.95rem, 4.2vw, 1.15rem); font-weight: 700; }}
+    .topbar .icon {{ color: {GREEN}; font-size: 1.5em; }}
+    .st-key-top_new_chat {{ display: flex; align-items: center; position: fixed; top: -0.125rem; right: 1rem;
+                            height: 3.75rem; z-index: 999991; }}
+    [data-testid="stExpandSidebarButton"] {{ background: {MENU} center / contain no-repeat !important; }}
+    [data-testid="stExpandSidebarButton"] > * {{ opacity: 0; }}
     [data-testid="stSidebar"][aria-expanded="true"] {{ box-shadow: 0 0 0 100vmax rgba(17, 24, 39, 0.45); }}
-    [data-testid="stSidebarHeader"] {{ position: absolute; top: 0.9rem; right: 0.8rem; z-index: 2; padding: 0; }}
-    [data-testid="stSidebarCollapseButton"] {{ visibility: visible !important; width: 1.8rem; height: 1.8rem;
+    [data-testid="stSidebarHeader"] {{ position: absolute; top: 0.9rem; right: 0.8rem; z-index: 2; }}
+    [data-testid="stSidebarCollapseButton"] {{ visibility: visible !important; }}
+    [data-testid="stSidebarCollapseButton"] button {{ width: 1.8rem; height: 1.8rem;
         background: {CLOSE} center / contain no-repeat !important; }}
-    [data-testid="stSidebarCollapseButton"] * {{ visibility: hidden; }}
-    [data-testid="stSidebarUserContent"] > div > [data-testid="stVerticalBlock"] {{ min-height: 0; }}
+    [data-testid="stSidebarCollapseButton"] button > * {{ opacity: 0; }}
     .brand {{ padding-right: 2.5rem; }}
     .section-label, [class*="st-key-example_"] {{ display: none !important; }}
     [data-testid="stLayoutWrapper"]:has(> .st-key-sidebar_footer) {{ margin-top: 0.4rem; }}
@@ -237,9 +235,9 @@ assistant = load_assistant()
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# The top bar only appears on narrow screens, where reloading the page starts a new chat.
-st.markdown(f"<div class='topbar'><span class='icon'>stethoscope</span>{TITLE}"
-            "<a class='topbar-new' href='./' target='_self' title='New chat'></a></div>", unsafe_allow_html=True)
+# The top bar and its new chat button only appear on narrow screens, where the sidebar is folded away.
+st.markdown(f"<div class='topbar'><span class='icon'>stethoscope</span>{TITLE}</div>", unsafe_allow_html=True)
+st.button("New chat", on_click=new_chat, key="top_new_chat")
 
 with st.sidebar:
     st.markdown(f"<div class='brand'><span class='icon'>stethoscope</span><div><div class='brand-title'>{TITLE}</div>"
