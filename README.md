@@ -10,6 +10,8 @@ This project builds a question answering assistant that gives educational medica
 | Demo video |  |
 | Report | [African_Medical_QA_Assistant_Report.pdf](report/African_Medical_QA_Assistant_Report.pdf) |
 
+The free Streamlit hosting puts the app to sleep after 12 hours without visitors, so if the page says "This app has gone to sleep due to inactivity", click "Yes, get this app back up!" and wait a moment for it to start.
+
 ## The Problem
 
 Reliable health information that fits the African context can be hard to find, and general-purpose chatbots can produce fluent answers that contain invented medical claims. The goal of this project was therefore an assistant that answers only with human-written answers from a curated African dataset, that understands questions phrased differently from the dataset, and that says so clearly when a question is outside medicine or about a topic the dataset does not cover. No external AI or chatbot API is used, and every prediction comes from the model trained in this repository.
@@ -130,7 +132,7 @@ python -m nbconvert --to notebook --execute --inplace notebooks/01_data_preparat
 streamlit run app.py                        # Opens the chat app at http://localhost:8501
 ```
 
-The notebooks can also be opened and run in VS Code, Jupyter or Google Colab. The web app needs the `models/final/` folder, which notebook 04 creates.
+The notebooks can also be opened and run in VS Code, Jupyter or Google Colab. The web app uses the `models/final/` folder that notebook 04 creates, and it downloads the same files from Hugging Face when that folder is missing.
 
 The hosted app runs on Streamlit Community Cloud directly from this repository. Because the trained model is too large for Git, `deploy/upload_model.py` publishes the contents of `models/final/` to the Hugging Face model repository [Fred-William/african-medical-qa-assistant](https://huggingface.co/Fred-William/african-medical-qa-assistant), and `app.py` downloads it from there whenever the local folder is missing. After re-running the notebooks, the hosted model can be updated by logging in with a Hugging Face token that has write permission and running the upload script.
 
@@ -146,7 +148,7 @@ To publish the app itself, sign in at [share.streamlit.io](https://share.streaml
 ```
 notebooks/          the full workflow, from notebook 01 to notebook 05
 app.py              Streamlit chat interface, which calls src/assistant.py
-.streamlit/         theme and server settings of the chat interface
+.streamlit/         theme, display and log settings of the chat interface
 src/                small modules shared by the notebooks and the web app
   config.py         paths and fixed settings such as the random seed and the base model
   text_cleaning.py  light cleaning applied to dataset questions and user questions
