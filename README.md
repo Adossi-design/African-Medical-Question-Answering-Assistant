@@ -4,11 +4,11 @@ This project builds a question answering assistant that gives educational medica
 
 > The assistant is for educational use only. It does not diagnose, prescribe treatment or replace health professionals.
 
-| Link | Status |
+| Resource | Link |
 |---|---|
-| Live system |  |
+| Live system | [african-medical-assistant.streamlit.app](https://african-medical-assistant.streamlit.app) |
 | Demo video |  |
-| Report |  |
+| Report | [African_Medical_QA_Assistant_Report.pdf](report/African_Medical_QA_Assistant_Report.pdf) |
 
 ## The Problem
 
