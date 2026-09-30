@@ -8,14 +8,10 @@ level = "error"
 toolbarMode = "minimal"
 
 [theme]
-# The chat uses a white page, the rounded Nunito font, dark slate text and a blue accent.
+# The chat uses the light theme with the rounded Nunito font, dark slate text and a bordered sidebar.
 base = "light"
-primaryColor = "#1f73d8"
-backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#f5f6f8"
 textColor = "#1f2937"
 font = "Nunito:https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
-baseRadius = "0.75rem"
 showSidebarBorder = true
 
 [theme.sidebar]
