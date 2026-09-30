@@ -1,8 +1,4 @@
 # These Streamlit settings apply both locally and on Streamlit Community Cloud.
-[server]
-# The file watcher is turned off because it scans unused parts of the transformers library and fills the log with errors.
-fileWatcherType = "none"
-
 [logger]
 # Only real errors are logged, because Streamlit warns about unused parts of the transformers library when it starts.
 level = "error"
