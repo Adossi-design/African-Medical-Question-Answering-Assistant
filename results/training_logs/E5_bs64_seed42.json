@@ -1,0 +1,89 @@
+{
+  "name": "E5_bs64_seed42",
+  "base_model": "sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+  "train_pairs": 711,
+  "learning_rate": 2e-05,
+  "batch_size": 64,
+  "max_epochs": 5,
+  "seed": 42,
+  "scale": 20.0,
+  "train_max_tokens": 256,
+  "warmup_fraction": 0.1,
+  "weight_decay": 0.01,
+  "optimizer": "AdamW",
+  "epochs": [
+    {
+      "epoch": 0,
+      "train_loss": null,
+      "val": {
+        "recall@1": 0.6241,
+        "recall@3": 0.7943,
+        "mrr": 0.711,
+        "questions": 141
+      }
+    },
+    {
+      "epoch": 1,
+      "train_loss": 0.4034,
+      "val": {
+        "recall@1": 0.7021,
+        "recall@3": 0.8865,
+        "mrr": 0.7966,
+        "questions": 141
+      },
+      "elapsed_seconds": 238.8
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.1665,
+      "val": {
+        "recall@1": 0.7518,
+        "recall@3": 0.8794,
+        "mrr": 0.823,
+        "questions": 141
+      },
+      "elapsed_seconds": 458.6
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.1416,
+      "val": {
+        "recall@1": 0.766,
+        "recall@3": 0.8936,
+        "mrr": 0.8353,
+        "questions": 141
+      },
+      "elapsed_seconds": 690.2
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.1324,
+      "val": {
+        "recall@1": 0.7589,
+        "recall@3": 0.8865,
+        "mrr": 0.8327,
+        "questions": 141
+      },
+      "elapsed_seconds": 896.6
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.1299,
+      "val": {
+        "recall@1": 0.766,
+        "recall@3": 0.8936,
+        "mrr": 0.8371,
+        "questions": 141
+      },
+      "elapsed_seconds": 1109.5
+    }
+  ],
+  "best_epoch": 5,
+  "best_val": {
+    "recall@1": 0.766,
+    "recall@3": 0.8936,
+    "mrr": 0.8371,
+    "questions": 141
+  },
+  "total_seconds": 1109.6
+}
