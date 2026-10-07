@@ -1,0 +1,135 @@
+question,category,source,topic,split
+What year was the Northridge earthquake that caused $20 million in damage?,non_medical,SQuAD 2.0 dev,Southern_California,val
+What type of club is the California Automobile State Association?,non_medical,SQuAD 2.0 dev,Southern_California,val
+Where does the 8 county megaregion extend from?,non_medical,SQuAD 2.0 dev,Southern_California,val
+What is the shortened name of the annual yacht race that takes place?,non_medical,SQuAD 2.0 dev,Southern_California,val
+The mountain ranges tail off into what kind of geographical formation?,non_medical,SQuAD 2.0 dev,Southern_California,val
+What type of locomotive was Salamanca?,non_medical,SQuAD 2.0 dev,Steam_engine,val
+How many events occur in an engine cycle?,non_medical,SQuAD 2.0 dev,Steam_engine,val
+What type of valve is used by recent safety valves?,non_medical,SQuAD 2.0 dev,Steam_engine,val
+"Along with internal combustion engines, what machines have superseded steam in some areas?",non_medical,SQuAD 2.0 dev,Steam_engine,val
+"Compared to Smeaton's improvement on Newcomen's engine, how much coal did Watt's engine use?",non_medical,SQuAD 2.0 dev,Steam_engine,val
+What was developed in the 1980's by the social partners representatives?,non_medical,SQuAD 2.0 dev,European_Union_law,val
+What entity has not taken the view that the specific goal of free trade are to underpinned by the general aims of improvement of people's well being?,non_medical,SQuAD 2.0 dev,European_Union_law,val
+When did the UK not subscribe to the Agreement on the Social Policy?,non_medical,SQuAD 2.0 dev,European_Union_law,val
+How many paid holiday days do most member states require?,non_medical,SQuAD 2.0 dev,European_Union_law,val
+What was not originally theorised about a free trade area?,non_medical,SQuAD 2.0 dev,European_Union_law,val
+Which boulevard can you find many majestic homes in the area?,non_medical,SQuAD 2.0 dev,"Fresno,_California",val
+What ethnic neighborhood in Fresno had primarily Japanese residents in 1940?,non_medical,SQuAD 2.0 dev,"Fresno,_California",val
+A third of Pacific Islanders are what ethnicity?,non_medical,SQuAD 2.0 dev,"Fresno,_California",val
+What was the percentage of Non-Hispanic Whites in 2010?,non_medical,SQuAD 2.0 dev,"Fresno,_California",val
+Who preferred the Brookhaven section?,non_medical,SQuAD 2.0 dev,"Fresno,_California",val
+Linux became a networking powerhouse in the 1980s for what reason?,non_medical,SQuAD 2.0 dev,Packet_switching,val
+What was AUSTPAC,non_medical,SQuAD 2.0 dev,Packet_switching,val
+What does ARPANET in simple terms?,non_medical,SQuAD 2.0 dev,Packet_switching,val
+What concepts influenced the later ARPANET?,non_medical,SQuAD 2.0 dev,Packet_switching,val
+How is packet switching characterized,non_medical,SQuAD 2.0 dev,Packet_switching,val
+What is another name a formation?,non_medical,SQuAD 2.0 dev,Geology,val
+What idea by Charles Lyell was widely accepted at the time of publication?,non_medical,SQuAD 2.0 dev,Geology,val
+"When rock folds deep in the Earth it can fold one of two ways, when it buckles downwards it creates what?",non_medical,SQuAD 2.0 dev,Geology,val
+Where did Ibna Sina believe the origin of geology science was?,non_medical,SQuAD 2.0 dev,Geology,val
+What are key beds younger than?,non_medical,SQuAD 2.0 dev,Geology,val
+What is the term for an Indian private school?,non_medical,SQuAD 2.0 dev,Private_school,val
+What is the English translation of Kunskapsskolan?,non_medical,SQuAD 2.0 dev,Private_school,val
+What kind of taxation funds private schools?,non_medical,SQuAD 2.0 dev,Private_school,val
+What is the tuititon used for at military academies?,non_medical,SQuAD 2.0 dev,Private_school,val
+"Along with location, endowment and the willingness of parents to pay, what factor influences private school tuition?",non_medical,SQuAD 2.0 dev,Private_school,val
+What is the 16th century known as the start of?,non_medical,SQuAD 2.0 dev,"Jacksonville,_Florida",val
+What is the name of the river that is completely contained inside Jacksonville?,non_medical,SQuAD 2.0 dev,"Jacksonville,_Florida",val
+What Sen. visited Jacksonville in 1888?,non_medical,SQuAD 2.0 dev,"Jacksonville,_Florida",val
+Why did Pedro Menendez de Aviles called the St. John River the river of May?,non_medical,SQuAD 2.0 dev,"Jacksonville,_Florida",val
+What was the name of the battle that marked the first Confederate win in Florida?,non_medical,SQuAD 2.0 dev,"Jacksonville,_Florida",val
+What pushes businesses to increase pressures on workers?,non_medical,SQuAD 2.0 dev,Economic_inequality,val
+What happens when business underpays their workers?,non_medical,SQuAD 2.0 dev,Economic_inequality,val
+What does the capabilities approach look at poverty as a form of?,non_medical,SQuAD 2.0 dev,Economic_inequality,val
+What country has low income inequality and high presence of unions?,non_medical,SQuAD 2.0 dev,Economic_inequality,val
+What do weak labor movement correlate with?,non_medical,SQuAD 2.0 dev,Economic_inequality,val
+What has the U of C maintained since 1938?,non_medical,SQuAD 2.0 dev,University_of_Chicago,val
+Who is the 75th United States Secretary of the Treasury?,non_medical,SQuAD 2.0 dev,University_of_Chicago,val
+Who serves as Microsoft and MF Global CEO?,non_medical,SQuAD 2.0 dev,University_of_Chicago,val
+Hutchinson Hall was designed to look like what Oxford hall?,non_medical,SQuAD 2.0 dev,University_of_Chicago,val
+What Nobel Prize researchers are former faculty members?,non_medical,SQuAD 2.0 dev,University_of_Chicago,val
+What was the English name of Gou's calendar?,non_medical,SQuAD 2.0 dev,Yuan_dynasty,val
+How many Khitan Tumens were there?,non_medical,SQuAD 2.0 dev,Yuan_dynasty,val
+Who were later Yuan emperors isolated from?,non_medical,SQuAD 2.0 dev,Yuan_dynasty,val
+Who was Genghis's 4th son?,non_medical,SQuAD 2.0 dev,Yuan_dynasty,val
+What was the Song dynasty's capital?,non_medical,SQuAD 2.0 dev,Yuan_dynasty,val
+"Other than 7 and 13, what other year interval do cicadas pupate?",non_medical,SQuAD 2.0 dev,Prime_number,val
+What is another type of public key cryptography algorithm?,non_medical,SQuAD 2.0 dev,Prime_number,val
+What theorem remains valid in unique factorization domains?,non_medical,SQuAD 2.0 dev,Prime_number,val
+What is the only divisor besides 1 that a product can have?,non_medical,SQuAD 2.0 dev,Prime_number,val
+"If a and q are coprime, which theorem holds that an arithmetic progression has an infinite number of primes?",non_medical,SQuAD 2.0 dev,Prime_number,val
+Microplates squeezing and rotating created the features of what?,non_medical,SQuAD 2.0 dev,Rhine,val
+How long is the section that turns north?,non_medical,SQuAD 2.0 dev,Rhine,val
+When did the Meuse and Waal diverge further upstream at Gorinchem?,non_medical,SQuAD 2.0 dev,Rhine,val
+What time did a river system develop in the Upper Rhine Graben?,non_medical,SQuAD 2.0 dev,Rhine,val
+What animal sometimes swims in the Rhine?,non_medical,SQuAD 2.0 dev,Rhine,val
+Which building was vacated three times to allow for the meeting of the Church's General Assembly?,non_medical,SQuAD 2.0 dev,Scottish_Parliament,val
+"What typically sits Tuesdays, Wednesdays, and Fridays?",non_medical,SQuAD 2.0 dev,Scottish_Parliament,val
+The committees in Scottish Parliament are weaker then in other systems why?,non_medical,SQuAD 2.0 dev,Scottish_Parliament,val
+What did Kllbrandon's report in 1973 recommend establishing?,non_medical,SQuAD 2.0 dev,Scottish_Parliament,val
+What happened to the building on George IV Bridge when the Parliament was done with it?,non_medical,SQuAD 2.0 dev,Scottish_Parliament,val
+What is the principle about relating spin and space variables?,non_medical,SQuAD 2.0 dev,Force,val
+What geometric shape is used in equations to determine net force?,non_medical,SQuAD 2.0 dev,Force,val
+What causes strain in structures?,non_medical,SQuAD 2.0 dev,Force,val
+What type of physics model did Einstein fail to make?,non_medical,SQuAD 2.0 dev,Force,val
+What is an object's mass proportional to at the surface of the Earth?,non_medical,SQuAD 2.0 dev,Force,val
+What are the risks and benefits of surgery to treat my Arnold-Chiari malformation?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,20. Arnold-Chiari Malformation,val
+"What are the options available for Arnold-Chiari Malformation,and are the conditions of it?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,20. Arnold-Chiari Malformation,val
+What support resources are available to help me cope with my adjustment disorder?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Adjustment Disorders,val
+What therapeutic approaches or interventions are available to help me effectively manage and adapt to the life changes associated with adjustment disorders?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Adjustment Disorders,val
+Is alopecia areata a side effect of chemotherapy?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Alopecia Areata,val
+"What are the potential psychological or emotional impacts of alopecia areata, and are there support resources available to help me cope with these effects?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Alopecia Areata,val
+What would cost me to reach my bipolar infection treatment goal?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Bipolar Disorder,val
+Is this happening to me because one of my family members have been diagnosed with Bipolar Disorder?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Bipolar Disorder,val
+What are the potential risks and benefits of surgical options for treating blepharochalasis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Blepharochalasis,val
+Is blepharochalasis going to affect my long distance vision?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Blepharochalasis,val
+What specific symptoms or warning signs should I watch out for that would indicate a need for urgent medical attention during my COVID-19 illness?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,COVID-19,val
+What precautions should I take to protect others from COVID-19?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,COVID-19,val
+"Are there any complementary or alternative therapies that could help alleviate my chronic pain from spondylosis, such as acupuncture, chiropractic care, or massage therapy?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Chronic Pain from Spondylosis,val
+"How can I effectively manage flare-ups of pain and stiffness associated with spondylosis on a day-to-day basis, and when should I seek medical attention for worsening symptoms or new concerns?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Chronic Pain from Spondylosis,val
+"How can he prevent spreading conjunctivitis to others, and what precautions should he take to avoid reinfection?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Conjunctivitis,val
+"Are there any precautions I should take to prevent spreading conjunctivitis to others, and how long should I wait before returning to work or other activities?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Conjunctivitis,val
+Are there any specific dietary or lifestyle changes I can make to manage my dyspepsia symptoms and improve my digestive health?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Dyspepsia,val
+So it the type of food that is cause my indigestion?Or maybe it not dyspepsiaPlease doctor can it be contagious,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Dyspepsia,val
+"What are the recommended treatment options for endocarditis, and how long is the typical duration of treatment ??",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Endocarditis,val
+What are complications of endocarditis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Endocarditis,val
+"What are the treatment options for endophthalmitis, and what is the expected outcome?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Endophthalmitis,val
+How can one know that it is Endophthalmitis not just an eye infection?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Endophthalmitis,val
+"Besides medication, are there any lifestyle changes or dietary modifications that I can make to manage my GERD symptoms in the long term?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Gastroesophageal Reflux Disease (GERD),val
+"Doctor, aside from medication, are there any dietary changes or lifestyle modifications I should consider to help manage my symptoms of GERD and prevent flare-ups?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Gastroesophageal Reflux Disease (GERD),val
+What is the cause of hydronephrosis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Hydronephrosis,val
+What is the most common complication of hydronephrosis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Hydronephrosis,val
+Can you provide insights into any recent advancements in the understanding or treatment of hypogonadism that may not yet be widely known or discussed?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Hypogonadism,val
+Will Hypogonadism affect my chance of impregnating a lady in the future and does it have a permanent cure?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Hypogonadism,val
+"Are there any specific cardiovascular screenings or assessments recommended for individuals with Marfan syndrome, and if so, when should I undergo them?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Marfan Syndrome,val
+Are there any lifestyle modifications or precautions I should consider to minimize the impact of Marfan Syndrome on my daily life and overall health?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Marfan Syndrome,val
+"What evidence-based treatments or therapies are available for managing obsessive-compulsive disorder, and what are their potential benefits and side effects?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Obsessive-Compulsive Disorder,val
+"Is Obsessive-Compulsive Disorder a combination of genes, temperament, and lived experiences?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Obsessive-Compulsive Disorder,val
+What additional options or procedures are available to address any unsatisfactory outcomes or complications resulting from the otoplasty surgery?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Otoplasty complications,val
+What are the risk factors of otoplasty complications?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Otoplasty complications,val
+How can I access counseling or therapy to manage panic disorder?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Panic Disorder,val
+What types of therapy or medication are available to treat panic disorder?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Panic Disorder,val
+“Are there any specific activities or habits I should avoid or modify to prevent exacerbating my pleurisy symptoms?”,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Pleurisy,val
+How long does it typically take for pleurisy to resolve?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Pleurisy,val
+What is the first line treatment for Poly myalgia Rheumatica?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Polymyalgia Rheumatica,val
+What potential side effects or complications should I be aware of from the medications prescribed to treat Polymyalgia Rheumatica?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Polymyalgia Rheumatica,val
+Are there any lifestyle changes or home remedies I can incorporate to help manage the symptoms of psoriasis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Psoriasis,val
+Will her Psoriasis affect other aspects of her health?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Psoriasis,val
+Do schizophrenia runs in family?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Schizophrenia,val
+Do you have to take pills for schizophrenia? Does it gets better in time?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Schizophrenia,val
+"What is the cause of Scleroderma?
+Will the hardened skin be back to normal?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Scleroderma,val
+What is Scleroderma and how would she know if she had it?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Scleroderma,val
+"What possible factors may be contributing to my somatization disorder, and what strategies can I use to address them effectively?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Somatization Disorder,val
+How can I avoid the risk of somatization disorder?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Somatization Disorder,val
+"What are the signs of Tendinitis,and how does it affect the body?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Tendinitis,val
+Are there any specific activities or movements I should avoid to prevent exacerbating the tendinitis ?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Tendinitis,val
+What steps can I take to prevent future occurrences of urethritis?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Urethritis,val
+What are the symptoms of urethritis?? And how can I treat it ??,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Urethritis,val
+What specific triggers or allergens should I avoid to help manage my urticaria symptoms effectively?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Urticaria,val
+"Could there be any underlying triggers or allergens contributing to my urticaria, and how can I identify and avoid them?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Urticaria,val
+"Could any medications or underlying medical conditions be contributing to my urticaria, and if so, how can they be managed?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Urticaria (Hives),val
+"What specific triggers should I be aware of that could be causing my hives, and how can I effectively manage and avoid these triggers to prevent future outbreaks?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Urticaria (Hives),val
+"Dr, is vitiligo due to sun rays exposure or due to skin care products?",uncovered_medical,AfriMed-QA v2.5 consumer_queries,Vitiligo,val
+Is it likely that people close to me can also get vitiligo by coming in close contact to me?,uncovered_medical,AfriMed-QA v2.5 consumer_queries,Vitiligo,val
