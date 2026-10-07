@@ -1,0 +1,335 @@
+id,source_split,question,rank_of_correct_answer,correct_at_1,top1_score,correct_answer_score,top1_matched_question,top1_answer,correct_answer
+2bbd0a1c17536c7c2af69d785a2fe5dff4a6fca2a1a1aa2bc3893f8645f98852,val,What is the main reason people develop goitre in some parts of Africa?,1,True,0.6629,0.6629,What is the primary cause of endemic goiter in Africa?,"Iodine deficiency is the primary cause of endemic goiter in Africa, resulting from insufficient dietary intake of iodine-rich foods such as iodized salt. Endemic goiter can lead to thyroid gland enlargement and thyroid hormone imbalances, causing a range of health complications.","Iodine deficiency is the primary cause of endemic goiter in Africa, resulting from insufficient dietary intake of iodine-rich foods such as iodized salt. Endemic goiter can lead to thyroid gland enlargement and thyroid hormone imbalances, causing a range of health complications."
+dad248969091068acd6b1d2e4f9a668cd226947424f15f69a218d4e3cad19641,val,How does having clean and safe water affect people's health in rural African communities?,2,False,0.8664,0.8627,How does the lack of access to clean water impact health in African communities?,The lack of access to clean water contributes to the spread of waterborne diseases like cholera and typhoid fever.,"Limited access to clean water in rural Africa contributes to the spread of waterborne diseases, malnutrition, and poor sanitation-related health issues."
+8e0389560ef00643378102ab3d919cf6b5f8f80d2546afd1fe8334a30d6925e9,val,How can traditional dancing and other physical activities help people stay healthy in African communities?,1,True,0.8593,0.8593,How can traditional dance and physical activity be used to promote health and well-being in African communities?,"By incorporating traditional dance and physical activities into health promotion programs, communities can encourage physical fitness and social cohesion.","By incorporating traditional dance and physical activities into health promotion programs, communities can encourage physical fitness and social cohesion."
+0e5464013057fafa77f13dbcd0cd6f3182b90d0864b71a4ac2882cdb20ea7657,val,How do people usually get Ebola in Africa?,2,False,0.5935,0.5516,What strategies are effective in preventing the spread of Ebola virus in African countries?,"Strategies include early detection, isolation of cases, contact tracing, community engagement, and vaccination campaigns.","Ebola virus disease is primarily transmitted through direct contact with bodily fluids of infected individuals or through contact with contaminated surfaces or objects in healthcare settings, communities, or during burial rituals in Africa."
+a09f67794c50517ebe85cb8b3574c3c046be79bb2e67cf55b55e1ad84910823f,val,"A cattle herder who often sleeps outside has repeated fever, strong headaches, body pain, weakness and sometimes confusion. What illness is he most likely to have, and what test should be done first?",1,True,0.7985,0.7985,"A 30-year-old man in a remote African village presents with intermittent fever, severe headaches, and muscle pains. He also reports feeling weak and lethargic, with occasional confusion. His occupation involves herding cattle, and he often sleeps in the open. Given his symptoms and context, what is the most likely diagnosis, and what initial diagnostic test should be conducted?","Correct Answer: African Trypanosomiasis (Sleeping Sickness); Conduct a blood smear to identify Trypanosoma parasites.
+Rationale/Reasoning:
+African Trypanosomiasis, or Sleeping Sickness, is caused by the Trypanosoma parasite and transmitted through the bite of an infected tsetse fly. This condition is prevalent in certain parts of Africa, particularly in rural or remote areas where tsetse flies are common.","Correct Answer: African Trypanosomiasis (Sleeping Sickness); Conduct a blood smear to identify Trypanosoma parasites.
+Rationale/Reasoning:
+African Trypanosomiasis, or Sleeping Sickness, is caused by the Trypanosoma parasite and transmitted through the bite of an infected tsetse fly. This condition is prevalent in certain parts of Africa, particularly in rural or remote areas where tsetse flies are common."
+498e9cd0d604892305322f77bd7a2d07cdec8a6a18802f6acc1455835e9e2990,val,How is cholera usually spread in Africa?,1,True,0.6784,0.6784,What is the primary mode of transmission of Cholera in Africa?,"Cholera is primarily transmitted through the consumption of contaminated food or water in Africa, particularly in areas with poor sanitation and hygiene practices.","Cholera is primarily transmitted through the consumption of contaminated food or water in Africa, particularly in areas with poor sanitation and hygiene practices."
+62007e711fd2c3a8377e1bdffa1dba0d387ca590c6ab60ec8166683d4e351b49,val,How do the survival chances of children with leukemia in Africa compare with those in developed countries?,1,True,0.7266,0.7266,How does the prognosis of childhood leukemia differ between Africa and developed countries?,"In Africa, the prognosis of childhood leukemia may be poorer due to factors such as late presentation, lack of access to specialized treatment, and limited healthcare resources.","In Africa, the prognosis of childhood leukemia may be poorer due to factors such as late presentation, lack of access to specialized treatment, and limited healthcare resources."
+3d9439b11a6bc10feb390ff0d72e88d16f7b69115c7992911fce7dfcf9e46a07,val,What causes the highest number of deaths among newborn babies in Nigeria?,2,False,0.772,0.7417,What is the primary cause of infant mortality in Africa?,"Neonatal infections, including sepsis, pneumonia, and neonatal tetanus, are the primary cause of infant mortality in Africa. Factors such as inadequate healthcare infrastructure, poor sanitation, and limited access to maternal and child health services contribute to the high burden of neonatal infections in the region.","Preterm birth is the leading cause of neonatal mortality in Nigeria, accounting for approximately 35% of all neonatal deaths. The condition is caused by premature birth, which can lead to respiratory distress, infection, and other complications if not treated promptly. Preterm birth is a significant public health challenge in Nigeria, with inadequate access to healthcare, poor maternal health, and lack of skilled birth attendants being some of the contributing factors."
+5e13908150266c0f5544089d6f3ba9d6c7115deaace3ed535f148f40a435e05a,val,How do traditional healers and herbal treatments contribute to healthcare in Africa?,17,False,0.9378,0.5775,How do traditional healers contribute to healthcare in Africa?,"Traditional healers play a significant role in providing healthcare services, especially in rural areas where access to modern medicine is limited.","Traditional medicine plays a significant role in healthcare delivery, particularly in rural areas where access to modern healthcare is limited. However, challenges include standardization, regulation, and integration with conventional healthcare systems."
+73a7d69fe9e4c0777661c07f10dbda14953ce29eb9d669c65172a560ab1b9e47,val,Which cultural practices can increase the spread of HIV in some African communities?,1,True,0.7563,0.7563,What cultural practices influence the prevalence of HIV/AIDS in certain African regions?,"Practices such as polygamy, female genital mutilation, and lack of comprehensive sex education can contribute to the spread of HIV/AIDS in some African communities","Practices such as polygamy, female genital mutilation, and lack of comprehensive sex education can contribute to the spread of HIV/AIDS in some African communities"
+28ed54901ab14f4892fe74fbb92099c610a36e5ccce588dd5298af9e9bba1cbf,val,What is the main cause of long-term hepatitis in adults in Africa?,1,True,0.8959,0.8959,What is the primary cause of chronic hepatitis in adults in Africa?,"Hepatitis B virus (HBV) infection is the primary cause of chronic hepatitis in adults in Africa, leading to progressive liver inflammation, fibrosis, and cirrhosis. Factors such as vertical transmission, unsafe medical injections, and limited access to HBV vaccination contribute to the high prevalence of chronic HBV infection in the region.","Hepatitis B virus (HBV) infection is the primary cause of chronic hepatitis in adults in Africa, leading to progressive liver inflammation, fibrosis, and cirrhosis. Factors such as vertical transmission, unsafe medical injections, and limited access to HBV vaccination contribute to the high prevalence of chronic HBV infection in the region."
+0905eb3e2ac1755359a48c7ecc12f529afccf233d55f9f72e82710b67f01e54f,val,What changes can be seen under the microscope in African patients with scalp ringworm?,1,True,0.6118,0.6118,What histopathological changes are observed in African cases of endemic tinea capitis affecting the scalp?,"African cases of endemic tinea capitis affecting the scalp typically show superficial perifollicular inflammation, hair shaft invasion by fungal hyphae, and varying degrees of keratinocyte hyperplasia. Histopathological examination may reveal follicular plugging, ectothrix or endothrix invasion, and a mixed inflammatory infiltrate surrounding affected hair follicles.","African cases of endemic tinea capitis affecting the scalp typically show superficial perifollicular inflammation, hair shaft invasion by fungal hyphae, and varying degrees of keratinocyte hyperplasia. Histopathological examination may reveal follicular plugging, ectothrix or endothrix invasion, and a mixed inflammatory infiltrate surrounding affected hair follicles."
+547f5ec8e4b7bebed1ec557f080faca2509f5d6746045089d9b9ba21b3fb2742,val,What can doctors see in a bone marrow sample when a patient has leishmaniasis?,1,True,0.7422,0.7422,What histopathological features characterize African cases of endemic leishmaniasis affecting the bone marrow?,"African cases of endemic leishmaniasis affecting the bone marrow often show hypercellularity, histiocytic proliferation, and the presence of Leishmania amastigotes within histiocytes or macrophages. Histopathological examination may reveal erythroid hyperplasia, myeloid expansion, and varying degrees of granulomatous inflammation in affected areas.","African cases of endemic leishmaniasis affecting the bone marrow often show hypercellularity, histiocytic proliferation, and the presence of Leishmania amastigotes within histiocytes or macrophages. Histopathological examination may reveal erythroid hyperplasia, myeloid expansion, and varying degrees of granulomatous inflammation in affected areas."
+8762c35252bc18b105366a5b5b77940c0cc150921cfd4c7fd4f6046697ee113f,val,What can African communities do to reduce the stigma around mental health problems?,1,True,0.9215,0.9215,How can communities address the stigma surrounding mental health issues in Africa?,"By promoting awareness, education, and access to culturally sensitive mental health services, communities can help reduce stigma and improve support for those in need.","By promoting awareness, education, and access to culturally sensitive mental health services, communities can help reduce stigma and improve support for those in need."
+6c716883f84024e3d5a12e32688a8f740fd1382580e70e50ffc899750554c8c2,val,How do child marriage and female genital mutilation affect the health of mothers and children in Africa?,1,True,0.7171,0.7171,Explain the impact of cultural practices such as child marriage and female genital mutilation on maternal and child health in Africa.,"Cultural practices such as child marriage and female genital mutilation contribute to poor maternal and child health outcomes, including early pregnancy complications, obstetric fistula, maternal mortality, and neonatal health problems. Addressing these practices requires comprehensive strategies that involve community engagement, legal reforms, and social norms change.","Cultural practices such as child marriage and female genital mutilation contribute to poor maternal and child health outcomes, including early pregnancy complications, obstetric fistula, maternal mortality, and neonatal health problems. Addressing these practices requires comprehensive strategies that involve community engagement, legal reforms, and social norms change."
+0e38b0cf54fc3bf5561e23232bae68468e80e6d3a0b0c35849a9fb59c4eafd20,val,What do community health workers do to help control malaria in Nigeria?,1,True,0.8752,0.8752,What is the role of community health workers in malaria control programs in Nigeria?,"Community health workers play a crucial role in malaria prevention and treatment by providing education, distributing bed nets, conducting rapid diagnostic tests, and administering antimalarial medications at the community level.
+Reason: Community health workers are essential in reaching remote and underserved populations in Nigeria with malaria prevention and treatment interventions. Their involvement in community-based malaria control programs helps increase access to essential services, improve health outcomes, and reduce malaria transmission rates.","Community health workers play a crucial role in malaria prevention and treatment by providing education, distributing bed nets, conducting rapid diagnostic tests, and administering antimalarial medications at the community level.
+Reason: Community health workers are essential in reaching remote and underserved populations in Nigeria with malaria prevention and treatment interventions. Their involvement in community-based malaria control programs helps increase access to essential services, improve health outcomes, and reduce malaria transmission rates."
+2db65994645321d35de98e172b87fddcb3b6ecd357178021a2c32989596c467c,val,"How do birth defects differ in African areas where women use more or less folic acid, and how does this compare with developed countries?",1,True,0.6332,0.6332,How does the prevalence and management of congenital malformations differ between regions with high and low folic acid supplementation rates in African countries compared to developed nations?,Regions with low folic acid supplementation rates in African countries may have higher rates of neural tube defects and other congenital malformations. Public health initiatives promoting folic acid supplementation and prenatal care are essential.,Regions with low folic acid supplementation rates in African countries may have higher rates of neural tube defects and other congenital malformations. Public health initiatives promoting folic acid supplementation and prenatal care are essential.
+e46d4dfc677fa807caf16066273f9f9a6275fd3f8194131db3d78f8c352d0c85,val,What condition most often causes high calcium levels in the blood in Africa?,7,False,0.53,0.493,What is the primary cause of chronic kidney disease in Africa?,Chronic kidney disease in Africa is primarily caused by hypertension and untreated or poorly managed diabetes mellitus.,"Albinism is a genetic condition that results in a lack of melanin pigment in the skin, hair, and eyes. In African populations, individuals with albinism face significant dermatological implications due to their fair skin. They are at a much higher risk of sunburn and skin cancer, particularly squamous cell carcinoma and basal cell carcinoma, because of their lack of natural protection from the sun's UV radiation. Regular use of sunscreen, protective clothing, and routine dermatological examinations are essential to manage these risks and monitor for early signs of skin cancer"
+176cbdbfa97530ec4c8ca747e5a1732172ce541f6e25cddd46b03a096da40b9d,val,How is the treatment of skin infections in Africa different from treatment in Western countries?,1,True,0.7931,0.7931,How does the management of skin infections differ in African populations compared to Western populations?,"Management of skin infections in Africa may involve basic hygiene practices, topical medications, and traditional remedies due to limited access to healthcare services.","Management of skin infections in Africa may involve basic hygiene practices, topical medications, and traditional remedies due to limited access to healthcare services."
+fe1decc463a008679f5a0657979635808e619d358bc6388cf283c2c917a4869a,val,Which virus causes many cases of liver cancer in Africa?,2,False,0.8888,0.8859,"Which disease, caused by a virus, is a common cause of liver cancer in Africa?","Hepatitis B virus (HBV)
+Reason: Chronic infection with the Hepatitis B virus (HBV) is a common cause of liver cancer in Africa, highlighting the importance of vaccination and early detection.",Hepatitis C virus (HCV) infection is a leading cause of liver cancer in Africa.
+6b8b846861c246c51d723c3c293cdd7903d3d78c7e757237e3b66f7b2d89d70e,test,What infections can happen as a result of atopic dermatitis or eczema?,1,True,0.7495,0.7495,Infectious complications of Atopic Dermatitis,"a. Impetigo: secondary to staph. aureus & some from Strep. grp A
+b. Eczema herpeticum: secondary to HSV
+c. Molluscum contagiosum: secondary to Poxvirus
+d. Dermatophyte infection: Tinea","a. Impetigo: secondary to staph. aureus & some from Strep. grp A
+b. Eczema herpeticum: secondary to HSV
+c. Molluscum contagiosum: secondary to Poxvirus
+d. Dermatophyte infection: Tinea"
+7688c3faca219a516ec7c895f07ce64e549dfbfebe209758f00ce5ccf04a0a5a,test,What other conditions can look like a goitre?,3,False,0.673,0.5854,Indications for surgery on a goitre,"• Cosmesis
+• Signs of compression-
+a. distended neck veins
+b. Difficulty in breathing
+c. Dysphonia/voice hoarseness
+d. Dysphagia
+• Goitre refractory to medical treatment
+• Malignant goitre
+• Retrosternal goitre
+• Pt’s preferences","Thyroglossal cyst
+Lymphomas
+TB adenitis
+Carotid hemangiomas
+Cystic hygroma
+Secondary syphilis"
+d4f8e32f32801e104076095b8dda021c735ffd090a0179decc594205293e922d,test,What tumour markers are used for colon cancer?,1,True,0.9614,0.9614,tumour markers for colon cancer:,Carcinoma embryonic antigen (CEA),Carcinoma embryonic antigen (CEA)
+0a92d38f0a47ec90adbfc5a4914d9e2f41d127657f8455abb7676c528dcfb9ed,test,"What is a surgical site infection, and what are the different types?",1,True,0.6595,0.6595,Write short notes on surgical site infections under the following subheadings: Definition and classification,"These are infections caused by microbial invasion of wounds created by an invasive surgical procedure
+Classification:
+• Incisional
+• Superficial: Skin and subcutaneous layer
+• Deep: Involving the muscle and fascial planes
+• Organ space: Infection involves any part of the anatomy in organs and spaces other than the incision, which was opened or manipulated during the operation","These are infections caused by microbial invasion of wounds created by an invasive surgical procedure
+Classification:
+• Incisional
+• Superficial: Skin and subcutaneous layer
+• Deep: Involving the muscle and fascial planes
+• Organ space: Infection involves any part of the anatomy in organs and spaces other than the incision, which was opened or manipulated during the operation"
+a1d47a3910c9f9ceec340d173002fb703a413bbd51509d212b8f78206ad48c93,test,"After abdominal trauma, what finding would make a diagnostic peritoneal lavage positive?",158,False,0.5168,0.2793,4 weeks old male presented with projectile non-bilious vomiting for 2 days. A diagnosis of Duodenal atresia was made. How would you confirm the diagnosis?,Abdominal Ultrasound,"• At least 10mls of gross blood
+• RBC count at least 100000/ml
+• WBC count at least 500 cells/ml
+• Amylase >19 iu/l
+• Food, bile or bacteria
+• ALP > 2IU/l
+• Bilirubin > 0.01mg/dl"
+fc61f4d625b16c4dc3aa668c25c32f92f7659b34ff62d93c88ff6768c32e6708,test,How is rheumatoid arthritis diagnosed?,1,True,0.6826,0.6826,How do you make a diagnosis of Rheumatoid arthithritis:,Anti-CCP,Anti-CCP
+23df495b4b9ef9dfb8d30626551f1dbe7fb94e0f43b109ee0c71ee6b95a4565b,test,How is an inguinal hernia treated in children?,1,True,0.8056,0.8056,What is the management of this disorder Inguinal hernia in children?,- Herniotomy,- Herniotomy
+86aad40a6e7bfa857d8844b4ddf3ceebf2d2434370c756231609b2cc63107712,test,In what situations would a patient need a thoracotomy?,1,True,0.6668,0.6668,Thoracotomy indications,"• Resuscitation thoracotomy: To do open cardiac massage.
+• Emergency thoracotomy:
+For massive hemothorax, cardiac tamponade, major air leak, great vessel injury, intrathoracic foreign body and chest wall defect.
+• Elective thoracotomy: (done in after investigations):
+For diaphragmatic injuries, esophageal injuries, intracardiac injuries, aortic rupture with false aneurysm, clotted hemothorax and empyema.
+After chest tube insertion
+• Drainage of > 1500mls of blood in 24 hours
+• Continuous bubbling after 24 hours
+• Drainage of blood > 300mls/h for 3 consecutive hours","• Resuscitation thoracotomy: To do open cardiac massage.
+• Emergency thoracotomy:
+For massive hemothorax, cardiac tamponade, major air leak, great vessel injury, intrathoracic foreign body and chest wall defect.
+• Elective thoracotomy: (done in after investigations):
+For diaphragmatic injuries, esophageal injuries, intracardiac injuries, aortic rupture with false aneurysm, clotted hemothorax and empyema.
+After chest tube insertion
+• Drainage of > 1500mls of blood in 24 hours
+• Continuous bubbling after 24 hours
+• Drainage of blood > 300mls/h for 3 consecutive hours"
+c4275cf685d13de31777835dc047907ca5c74d82cdfe8fbabb35e2cd3512ece4,test,How is pancreatic cancer treated?,1,True,0.815,0.815,Management of pancreatic cancer,"• MDT
+• Modalities include
+a. Surgery. Only curative
+b. Chemotherapy
+c. radiotherapy
+• Depending on the degree of contact between the tumor and surrounding vessels (namely the portal vein, superior mesenteric artery or vein, coeliac trunk, and common hepatic artery), Pancreatic tumors are classified as a. resectable,
+b. borderline resectable
+c. locally advanced and
+d. metastatic disease.
+Resectable disease. Whipple’s procedure
+• Remove head, distal stomach(antrum), proximal jejunum, duodenum, gallbladder and common bile duct.
+• This is followed by post operative chemotherapy
+Borderline resectable
+• neo-adjuvant chemotherapy, followed by chemoradiation, prior to surgery non resectable disease
+a. locally advanced disease- direct contact / invasion of local vessels should undergo chemotherapy.
+b. Metastatic disease-palliative chemotherapy mainstay.
+• Those with poor performance status, consider symptomatology control. Relieve symptoms associated with jaundice e.g., pruritus by placement of a biliary stent
+• If there is exocrine insufficiency, consider enzyme replacement i.e., lipase to control steatorrhea and malabsorption","• MDT
+• Modalities include
+a. Surgery. Only curative
+b. Chemotherapy
+c. radiotherapy
+• Depending on the degree of contact between the tumor and surrounding vessels (namely the portal vein, superior mesenteric artery or vein, coeliac trunk, and common hepatic artery), Pancreatic tumors are classified as a. resectable,
+b. borderline resectable
+c. locally advanced and
+d. metastatic disease.
+Resectable disease. Whipple’s procedure
+• Remove head, distal stomach(antrum), proximal jejunum, duodenum, gallbladder and common bile duct.
+• This is followed by post operative chemotherapy
+Borderline resectable
+• neo-adjuvant chemotherapy, followed by chemoradiation, prior to surgery non resectable disease
+a. locally advanced disease- direct contact / invasion of local vessels should undergo chemotherapy.
+b. Metastatic disease-palliative chemotherapy mainstay.
+• Those with poor performance status, consider symptomatology control. Relieve symptoms associated with jaundice e.g., pruritus by placement of a biliary stent
+• If there is exocrine insufficiency, consider enzyme replacement i.e., lipase to control steatorrhea and malabsorption"
+78abd63d3377977e85e3b91e87a20753006f2b4184e457e0653a3aebc7312a72,test,"What are the different types of placenta previa, and how is each one treated?",1,True,0.9481,0.9481,What are the types of placenta previa and what is the treatment option for each,"There are four types of placenta previa, classified based on the location and extent of placental coverage of the internal cervical os:
+1. *Type 1: Low-lying placenta*
+- Placenta is located near the internal os, but does not cover it.
+- Treatment: Expectant management, vaginal delivery possible.
+2. *Type 2: Marginal placenta previa*
+- Placenta covers the internal os partially.
+- Treatment: Expectant management, vaginal delivery possible, but may require cesarean section.
+3. *Type 3: Partial placenta previa*
+- Placenta covers the internal os partially, but extends into the cervical canal.
+- Treatment: Cesarean section recommended, as vaginal delivery may cause severe bleeding.
+4. *Type 4: Complete placenta previa*
+- Placenta completely covers the internal os and extends into the cervical canal.
+- Treatment: Cesarean section necessary, as vaginal delivery is not possible.
+Additional treatment options may include:
+- *Corticosteroids*: To promote fetal lung maturity in case of preterm delivery.
+- *Tocolytics*: To delay delivery in case of preterm labor.
+- *Blood transfusions*: To manage excessive bleeding.
+- *Bed rest*: To reduce bleeding and promote fetal growth.
+- *Pelvic rest*: Avoiding intercourse, tampons, and vaginal exams to reduce bleeding risk.","There are four types of placenta previa, classified based on the location and extent of placental coverage of the internal cervical os:
+1. *Type 1: Low-lying placenta*
+- Placenta is located near the internal os, but does not cover it.
+- Treatment: Expectant management, vaginal delivery possible.
+2. *Type 2: Marginal placenta previa*
+- Placenta covers the internal os partially.
+- Treatment: Expectant management, vaginal delivery possible, but may require cesarean section.
+3. *Type 3: Partial placenta previa*
+- Placenta covers the internal os partially, but extends into the cervical canal.
+- Treatment: Cesarean section recommended, as vaginal delivery may cause severe bleeding.
+4. *Type 4: Complete placenta previa*
+- Placenta completely covers the internal os and extends into the cervical canal.
+- Treatment: Cesarean section necessary, as vaginal delivery is not possible.
+Additional treatment options may include:
+- *Corticosteroids*: To promote fetal lung maturity in case of preterm delivery.
+- *Tocolytics*: To delay delivery in case of preterm labor.
+- *Blood transfusions*: To manage excessive bleeding.
+- *Bed rest*: To reduce bleeding and promote fetal growth.
+- *Pelvic rest*: Avoiding intercourse, tampons, and vaginal exams to reduce bleeding risk."
+4a8d3acdaa2b9b9920682347d1fa97df31463ac974c990207225ca33a5155764,test,"What is sigmoid volvulus, and what causes it?",1,True,0.8435,0.8435,Define Sigmoid Volvulus and its etiology,"A twisting of a loop of sigmoid colon around its mesenteric axis, which results in a combination of obstruction together with occlusion of the main vessels at the base of the involved mesentery.
+Risk factors/etiology include:
+a) Narrow mesentery
+b) Long tortuous sigmoid
+c) Megacolon
+d) Neurological disorders ie pseudobulbar palsy
+e) Adhesions
+f) Chronic constipation
+g) Chaga’s disease
+h) Old age
+i) High fiber diet","A twisting of a loop of sigmoid colon around its mesenteric axis, which results in a combination of obstruction together with occlusion of the main vessels at the base of the involved mesentery.
+Risk factors/etiology include:
+a) Narrow mesentery
+b) Long tortuous sigmoid
+c) Megacolon
+d) Neurological disorders ie pseudobulbar palsy
+e) Adhesions
+f) Chronic constipation
+g) Chaga’s disease
+h) Old age
+i) High fiber diet"
+7407d7ddb2a26137dfee08a76b18f135de39c3d1ba903193670f90190d8b9fb0,test,Why is placental abruption a serious problem for pregnant women in Africa?,1,True,0.858,0.858,How has abruption placenta been relatively problematic in pregnant women in Africa,"Placental abruption, also known as abruptio placentae, is a serious pregnancy complication where the placenta partially or completely separates from the uterus, depriving the baby of oxygen and nutrients. In African women, placental abruption is a significant concern due to various factors:
+1. High prevalence: Placental abruption is more common in African women, especially in sub-Saharan Africa, due to limited access to quality healthcare and high rates of hypertension and diabetes.
+2. Maternal mortality: Placental abruption is a leading cause of maternal mortality in Africa, accounting for up to 15% of pregnancy-related deaths.
+3. Risk factors: African women are more likely to experience risk factors such as:
+- Hypertension
+- Diabetes
+- Multiple pregnancies
+- Advanced maternal age
+- History of previous uterine surgery or cesarean section
+4. Limited access to care: In many African countries, women may not have access to timely and adequate medical care, leading to delayed diagnosis and treatment.
+5. Cultural beliefs: In some African cultures, women may delay seeking medical attention due to traditional beliefs or fear of hospitalization.
+6. Nutritional factors: Poor nutrition and micronutrient deficiencies, common in some African regions, may contribute to placental abruption.
+7. HIV/AIDS: The high prevalence of HIV/AIDS in some African countries increases the risk of placental abruption.
+It is essential to address these factors through:
+1. Improving access to quality healthcare
+2. Enhancing maternal health education
+3. Encouraging early prenatal care
+4. Managing hypertension and diabetes
+5. Providing nutritional support
+6. Addressing cultural beliefs and fears
+By tackling these challenges, we can reduce the incidence of placental abruption and improve maternal and fetal outcomes in African women.","Placental abruption, also known as abruptio placentae, is a serious pregnancy complication where the placenta partially or completely separates from the uterus, depriving the baby of oxygen and nutrients. In African women, placental abruption is a significant concern due to various factors:
+1. High prevalence: Placental abruption is more common in African women, especially in sub-Saharan Africa, due to limited access to quality healthcare and high rates of hypertension and diabetes.
+2. Maternal mortality: Placental abruption is a leading cause of maternal mortality in Africa, accounting for up to 15% of pregnancy-related deaths.
+3. Risk factors: African women are more likely to experience risk factors such as:
+- Hypertension
+- Diabetes
+- Multiple pregnancies
+- Advanced maternal age
+- History of previous uterine surgery or cesarean section
+4. Limited access to care: In many African countries, women may not have access to timely and adequate medical care, leading to delayed diagnosis and treatment.
+5. Cultural beliefs: In some African cultures, women may delay seeking medical attention due to traditional beliefs or fear of hospitalization.
+6. Nutritional factors: Poor nutrition and micronutrient deficiencies, common in some African regions, may contribute to placental abruption.
+7. HIV/AIDS: The high prevalence of HIV/AIDS in some African countries increases the risk of placental abruption.
+It is essential to address these factors through:
+1. Improving access to quality healthcare
+2. Enhancing maternal health education
+3. Encouraging early prenatal care
+4. Managing hypertension and diabetes
+5. Providing nutritional support
+6. Addressing cultural beliefs and fears
+By tackling these challenges, we can reduce the incidence of placental abruption and improve maternal and fetal outcomes in African women."
+b857a029af6f71930c8092116eab4b282db6474013f53bb8b98833913dc448c9,test,"Besides nutrition, fluids and electrolyte management, name four other treatments needed for severe acute pancreatitis.",1,True,0.7609,0.7609,"The management of a patient with acute severe pancreatitis requires a multidisciplinary input of seveal care divers. Beyond nutrition, fluids and electrolyte management, list four other therapeutic interventions needed:","Pain management/ analgesic
+Prophylactic/ therapeutic antibiotics
+Insulin for sugar control
+Antiemetics
+Sedation/ diazepines for alcohol withdrawal","Pain management/ analgesic
+Prophylactic/ therapeutic antibiotics
+Insulin for sugar control
+Antiemetics
+Sedation/ diazepines for alcohol withdrawal"
+d657b3f4656910fd29f6ac8eeb59ad8c9e0c948d2f42ff452f9c5b0925b18dbd,test,"What is the standard definition of postpartum haemorrhage, and why is it common in Nigeria?",2,False,0.7059,0.683,What is the primary cause of postpartum hemorrhage in Africa?,"Uterine atony, characterized by inadequate uterine muscle contractions after childbirth, is the primary cause of postpartum hemorrhage in Africa. Factors such as prolonged labor, multiparity, and uterine overdistention contribute to the development of uterine atony and excessive postpartum bleeding.","The classical definition of postpartum hemorrhage (PPH) is:
+- Bleeding from the genital tract exceeding 500 mL within the first 24 hours after spontaneous vagina delivery or 1000 mL following caesarean section
+PPH is common in Nigeria due to various factors, including:
+1. _Poor access to quality healthcare_: Limited availability of skilled healthcare providers, especially in rural areas.
+2. _High prevalence of anemia_: Widespread anemia among pregnant women increases the risk of PPH.
+3. _Hypertension and preeclampsia_: Common conditions in Nigerian pregnant women, increasing the risk of PPH.
+4. _Multiple pregnancies and high parity_: Higher risk of PPH in women with multiple pregnancies or high parity.
+5. _Traditional birth practices_: Home deliveries without skilled attendants, increasing the risk of PPH.
+6. _Limited availability of blood transfusion services_: Inadequate blood supply and lack of compatible blood types.
+7. _Poor infrastructure and transportation_: Delays in accessing healthcare facilities, especially in emergency situations.
+8. _Lack of adequate training and equipment_: Healthcare providers may not have the necessary skills or equipment to manage PPH effectively.
+9. _Cultural and socioeconomic factors_: Limited awareness, education, and financial resources contribute to the high incidence of PPH.
+10. _High maternal mortality rate_: PPH is a leading cause of maternal mortality in Nigeria, highlighting the need for improved healthcare services.
+Addressing these factors is crucial to reducing the incidence of PPH in Nigeria and improving maternal health outcomes."
+7cab910dc06c0405c1b79a79b4436c347ab8a7dc8ad1786da8b64eea6af945fc,test,"How does the body absorb, use and store iron?",1,True,0.5556,0.5556,Discuss Iron metabolism.,"Iron is essential for the functioning of all cells.
+Diet: must contain 10mg+ of iron daily (absorption of dietary iron 10%). 1mg iron must be absorbed daily.
+Sources of iron: Heme iron (meat etc.) – more bio-available.
+- Non-heme iron (plant based food, egg, etc).
+- Also endogenous turnover.
+Absorption: occurs in duodenum, upper jejunum. increase with low iron stores and if increased rate of erythrocyte production.
+- ferrous form of iron better absorbed.
+- decrease when iron stores are high.
+Absorption also enhanced by Vit. C; inhibited by phytates, tannin.
+Transported in blood by transferrin to bone marrow (after heme was split in intestinal mucosal cell with release of iron).
+Total body iron = 70% used in metabolic processes.
+= 10%-30% stored in RES as ferritin.
+Some stored as hemosiderin (insoluble form).","Iron is essential for the functioning of all cells.
+Diet: must contain 10mg+ of iron daily (absorption of dietary iron 10%). 1mg iron must be absorbed daily.
+Sources of iron: Heme iron (meat etc.) – more bio-available.
+- Non-heme iron (plant based food, egg, etc).
+- Also endogenous turnover.
+Absorption: occurs in duodenum, upper jejunum. increase with low iron stores and if increased rate of erythrocyte production.
+- ferrous form of iron better absorbed.
+- decrease when iron stores are high.
+Absorption also enhanced by Vit. C; inhibited by phytates, tannin.
+Transported in blood by transferrin to bone marrow (after heme was split in intestinal mucosal cell with release of iron).
+Total body iron = 70% used in metabolic processes.
+= 10%-30% stored in RES as ferritin.
+Some stored as hemosiderin (insoluble form)."
+8e8c2f243ced855a9c6c727e842b59b1ffb32e8c5bdc9a4056356a52da5bc765,test,Where does colorectal cancer commonly spread in the body?,8,False,0.5792,0.4513,What is the most common cancer among women in Africa?,Cervical cancer is the most common cancer among women in Africa.,"• Liver
+• Lungs
+• Brain"
+6afd5381fff653483146ad43e399b34b7a16074c975cd15b85f2b327160cfa23,test,"What are the sutures of the fetal skull, and which bones form each one?",1,True,0.8329,0.8329,List the suture lines of the fetal skull and their corresponding bordering bones,"the suture lines of the fetal skull and their corresponding bordering bones:
+1. _Metopic suture_: Frontal bone (interfrontal suture)
+2. _Coronal suture_: Frontal bone and parietal bone
+3. _Sagittal suture_: Parietal bones (interparietal suture)
+4. _Lambdoid suture_: Parietal bone and occipital bone
+5. _Occipitomastoid suture_: Occipital bone and mastoid part of temporal bone
+6. _Sphenofrontal suture_: Sphenoid bone and frontal bone
+7. _Sphenoparietal suture_: Sphenoid bone and parietal bone
+8. _Sphenotemporal suture_: Sphenoid bone and temporal bone
+9. _Sphenosquamosal suture_: Sphenoid bone and squamous part of temporal bone
+10. _Petrosquamosal suture_: Petrous part of temporal bone and squamous part of temporal bone
+11. _Intermaxillary suture_: Maxilla bones (intermaxillary suture)
+12. _Internasal suture_: Nasal bones (internasal suture)
+13. _Nasofrontal suture_: Nasal bone and frontal bone
+14. _Zygomaticofrontal suture_: Zygomatic bone and frontal bone
+15. _Zygomaticotemporal suture_: Zygomatic bone and temporal bone
+16. _Zygomaticomaxillary suture_: Zygomatic bone and maxilla bone
+17. _Frontonasal suture_: Frontal bone and nasal bone
+18. _Parietomastoid suture_: Parietal bone and mastoid part of temporal bone","the suture lines of the fetal skull and their corresponding bordering bones:
+1. _Metopic suture_: Frontal bone (interfrontal suture)
+2. _Coronal suture_: Frontal bone and parietal bone
+3. _Sagittal suture_: Parietal bones (interparietal suture)
+4. _Lambdoid suture_: Parietal bone and occipital bone
+5. _Occipitomastoid suture_: Occipital bone and mastoid part of temporal bone
+6. _Sphenofrontal suture_: Sphenoid bone and frontal bone
+7. _Sphenoparietal suture_: Sphenoid bone and parietal bone
+8. _Sphenotemporal suture_: Sphenoid bone and temporal bone
+9. _Sphenosquamosal suture_: Sphenoid bone and squamous part of temporal bone
+10. _Petrosquamosal suture_: Petrous part of temporal bone and squamous part of temporal bone
+11. _Intermaxillary suture_: Maxilla bones (intermaxillary suture)
+12. _Internasal suture_: Nasal bones (internasal suture)
+13. _Nasofrontal suture_: Nasal bone and frontal bone
+14. _Zygomaticofrontal suture_: Zygomatic bone and frontal bone
+15. _Zygomaticotemporal suture_: Zygomatic bone and temporal bone
+16. _Zygomaticomaxillary suture_: Zygomatic bone and maxilla bone
+17. _Frontonasal suture_: Frontal bone and nasal bone
+18. _Parietomastoid suture_: Parietal bone and mastoid part of temporal bone"
+1958af85f6bcbc2b8420596333d97fe0277ff76f623e6678d6c516df91d5cda9,test,How should a patient with atrial fibrillation be treated?,1,True,0.92,0.92,How would you manage a patient with atrial fibrillation,"a. Anticoagulate
+b. Rate control
+c. Rhythm control","a. Anticoagulate
+b. Rate control
+c. Rhythm control"
+1f28507344be8276438f9ebf7641465449e34179f428b77a84ac16b7736dad01,test,How should a doctor check a skin lesion that may be malignant melanoma?,1,True,0.8609,0.8609,How would you evaluate a lesion suspected to be malignant melanoma?,"Asymmetry, if a lesion is bisected, one half is not identical to the other half
+Border irregularity,
+Color variegation,
+Diameter >6 mm,
+Evolution - a lesion that is changing in size, shape, or color, or a new lesion","Asymmetry, if a lesion is bisected, one half is not identical to the other half
+Border irregularity,
+Color variegation,
+Diameter >6 mm,
+Evolution - a lesion that is changing in size, shape, or color, or a new lesion"
+769cba625519aec26263be2d26b06e217e8df211e241a09e61740769929a0b6c,test,"Why is each treatment for high potassium in the blood used, and what does each treatment do?",1,True,0.5346,0.5346,What is the rationale for the treatment modalities in hyperkalemia?,"Sodium bicarbonate – moves potassium into cell
+Salbutamol – moves potassium into cell
+Calcium gluconate – stabilizes myocardium
+Insulin / glucose – moves potassium into cell
+Kayexalate – ion exchange resin – binds potassium for excretion
+Dialysis – removes potassium","Sodium bicarbonate – moves potassium into cell
+Salbutamol – moves potassium into cell
+Calcium gluconate – stabilizes myocardium
+Insulin / glucose – moves potassium into cell
+Kayexalate – ion exchange resin – binds potassium for excretion
+Dialysis – removes potassium"
