@@ -1,0 +1,7 @@
+{
+  "index": "answers",
+  "answer_threshold": 0.52,
+  "scope_threshold": 0.32,
+  "trained_model": "models/E5_bs64_seed42",
+  "thresholds_chosen_on": "validation questions and validation questions that should be refused"
+}
