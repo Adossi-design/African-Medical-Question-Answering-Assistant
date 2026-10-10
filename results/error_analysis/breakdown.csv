@@ -1,0 +1,30 @@
+split,group,value,questions,TF-IDF,pretrained,fine-tuned (final)
+val,all,all,141,0.553,0.624,0.766
+val,country,NG,141,0.553,0.624,0.766
+val,specialty,Other/none,141,0.553,0.624,0.766
+val,question length,6-12 words,55,0.491,0.491,0.764
+val,question length,13-20 words,67,0.612,0.716,0.806
+val,question length,>20 words,19,0.526,0.684,0.632
+val,answer length,<=50 tokens,85,0.482,0.6,0.765
+val,answer length,51-250 tokens,55,0.655,0.655,0.764
+val,answer length,>250 tokens,1,1.0,1.0,1.0
+val,question style,exam-style / list prompt,46,0.435,0.652,0.739
+val,question style,other,95,0.611,0.611,0.779
+test,all,all,354,0.237,0.316,0.285
+test,country,KE,190,0.153,0.184,0.158
+test,country,MW,118,0.178,0.271,0.237
+test,country,NG,46,0.739,0.978,0.935
+test,specialty,General_Surgery,175,0.143,0.177,0.16
+test,specialty,Internal_Medicine,53,0.057,0.113,0.057
+test,specialty,Obstetrics_and_Gynecology,37,0.784,1.0,0.973
+test,specialty,Other/none,33,0.303,0.455,0.424
+test,specialty,Pediatrics,56,0.304,0.411,0.357
+test,question length,1-5 words,92,0.174,0.239,0.217
+test,question length,6-12 words,174,0.276,0.385,0.356
+test,question length,13-20 words,48,0.312,0.417,0.333
+test,question length,>20 words,40,0.125,0.075,0.075
+test,answer length,<=50 tokens,176,0.085,0.125,0.091
+test,answer length,51-250 tokens,131,0.305,0.366,0.336
+test,answer length,>250 tokens,47,0.617,0.894,0.872
+test,question style,exam-style / list prompt,172,0.273,0.384,0.343
+test,question style,other,182,0.203,0.253,0.231
