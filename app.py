@@ -1,0 +1,270 @@
+"""This module provides the Streamlit chat interface, while all language processing takes place in src/assistant.py."""
+import os
+from pathlib import Path
+
+import streamlit as st
+from huggingface_hub import snapshot_download
+
+from src.assistant import MedicalAssistant
+
+# Notebook 04 exports the model to this folder, and the hosted app downloads the same files from Hugging Face instead.
+MODEL_DIR = os.environ.get("MODEL_DIR", "models/final")
+MODEL_REPO = "Fred-William/african-medical-qa-assistant"
+
+# Setting this to True during development shows the retrieved question, the similarity score and the source.
+DEBUG_MODE = False
+
+TITLE = "AfriMed QA Assistant"
+SUBTITLE = "Your medical information companion for Africa"
+ABOUT = "AfriMed QA Assistant provides educational medical information using knowledge from the AfriMed-QA v2.5 dataset."
+DISCLAIMER = "For educational purposes only. It does not replace professional medical advice, diagnosis, or treatment."
+INPUT_NOTE = ("Educational information only. Important health decisions should be discussed with a qualified "
+              "healthcare professional.")
+SHORT_INPUT_NOTE = "Educational information only. Check health decisions with a professional."
+FOLLOW_UP = " Please consult a qualified healthcare professional for further guidance."
+TRADITIONAL_NOTE = ("This answer describes a traditional practice reported by dataset contributors. "
+                    "Its safety and effectiveness may not be scientifically established.")
+EXAMPLES = [
+    "How is uncomplicated malaria treated in Africa?",
+    "How does cholera spread?",
+    "How do people usually get Ebola in Africa?",
+    "Is vertigo a brain problem?",
+]
+
+BLUE, GREEN, DARK_GREEN, ORANGE, INK = "#1f73d8", "#2e8b6a", "#1d5b48", "#d8891f", "#1f2937"
+
+
+def svg(body: str) -> str:
+    """Return a CSS image made from the inner markup of a small SVG icon."""
+    body = body.replace("#", "%23")
+    return f"url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>{body}</svg>\")"
+
+
+def filled(path: str, colour: str) -> str:
+    """Return a CSS image of a filled icon drawn from one path in the given colour."""
+    return svg(f"<path fill='{colour}' d='{path}'/>")
+
+
+def outlined(paths: str, colour: str) -> str:
+    """Return a CSS image of an outlined icon drawn from one or more path elements in the given colour."""
+    return svg(f"<g fill='none' stroke='{colour}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>"
+               f"{paths}</g>")
+
+
+PERSON = filled("M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66"
+                "-5.33-4-8-4z", "#ffffff")
+ADD_CIRCLE = filled("M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4"
+                    "v2z", "#2f3542")
+INFO = filled("M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z",
+              "#3b4452")
+SEND = filled("M21 3 3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z", "#ffffff")
+MENU = filled("M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z", INK)
+CLOSE = filled("M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z",
+               INK)
+BUBBLE = outlined("<path d='M7.9 20A9 9 0 1 0 4 16.1L2 22Z'/>", "#374151")
+SHIELD = outlined("<path d='M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5"
+                  "-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z'/>", ORANGE)
+
+# The style sheet reproduces the approved design for desktop, tablet and phone on top of the Streamlit components.
+STYLE = f"""
+<style>
+/* Shared icon styles let small SVG images and Material Symbols sit inline with text. */
+.icon {{ font-family: 'Material Symbols Rounded'; font-weight: normal; line-height: 1; }}
+.svg-icon {{ flex-shrink: 0; background: center / contain no-repeat; }}
+.icon-info {{ background-image: {INFO}; }}
+.icon-shield {{ background-image: {SHIELD}; }}
+
+/* The conversation column stays centred with a comfortable reading width. */
+[data-testid="stMainBlockContainer"], [data-testid="stBottomBlockContainer"] {{ max-width: 62rem; }}
+[data-testid="stHeader"] {{ background: transparent; }}
+
+/* Chat rows place an avatar beside a rounded bubble, on the right for the user and on the left for the assistant. */
+[data-testid="stChatMessage"] {{ background: transparent; padding: 0; margin: 0.8rem 0; gap: 0.85rem; }}
+[data-testid="stChatMessageContent"] {{ flex-grow: 0; max-width: 70%; margin: 0 !important; border-radius: 1rem;
+                                         padding: 0.7rem 1.15rem; }}
+[data-testid="stChatMessageContent"] [data-testid="stMarkdownContainer"],
+[data-testid="stChatMessageContent"] p:last-child {{ margin-bottom: 0; }}
+[data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) {{ flex-direction: row-reverse; }}
+[data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) [data-testid="stChatMessageContent"] {{
+    background: #e9effb; }}
+[data-testid="stChatMessage"]:has([aria-label="Chat message from assistant"]) [data-testid="stChatMessageContent"] {{
+    background: #f1f2f4; }}
+[data-testid="stChatMessageAvatarCustom"] {{ width: 2.45rem; height: 2.45rem; border-radius: 50%; border: none; }}
+[data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) [data-testid="stChatMessageAvatarCustom"] {{
+    background: {BLUE}; }}
+[data-testid="stChatMessage"]:has([aria-label="Chat message from assistant"]) [data-testid="stChatMessageAvatarCustom"] {{
+    background: {DARK_GREEN}; }}
+[data-testid="stChatMessageAvatarCustom"] [data-testid="stIconMaterial"] {{ color: #ffffff !important; font-size: 1.35rem; }}
+[data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) [data-testid="stIconMaterial"] {{
+    color: transparent !important; width: 1.5rem; height: 1.5rem; background: {PERSON} center / contain no-repeat; }}
+
+/* The message composer is a rounded bar with a round send button on the right and a short note underneath. */
+[data-testid="stChatInput"] > div {{ border: 1px solid {BLUE} !important; border-radius: 2rem !important;
+                                     background: #ffffff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05); }}
+[data-testid="stChatInputTextArea"] {{ background: #ffffff; }}
+[data-testid="stChatInputSubmitButton"] {{ width: 2.75rem; height: 2.75rem; border-radius: 50%;
+    background: {BLUE} {SEND} center / 1.2rem no-repeat !important; }}
+[data-testid="stChatInputSubmitButton"] svg {{ visibility: hidden; }}
+[data-testid="stBottomBlockContainer"] {{ padding-bottom: 0.9rem; }}
+[data-testid="stBottomBlockContainer"]::after {{ content: "{INPUT_NOTE}"; display: block; text-align: center;
+    font-size: 0.75rem; color: #6b7280; padding-top: 0.55rem; }}
+
+/* Streamlit Community Cloud adds Fork and GitHub buttons to the header, which the design does not include. */
+[data-testid="stToolbarActions"] {{ display: none; }}
+
+/* The sidebar is a compact fixed column with the brand, the new chat card, the examples and two information boxes. */
+[data-testid="stSidebarResizeHandle"] {{ display: none; }}
+[data-testid="stSidebarContent"] {{ padding: 0 1rem; }}
+[data-testid="stSidebarUserContent"] {{ padding: 1rem 0 !important; }}
+[data-testid="stSidebarUserContent"] [data-testid="stMarkdownContainer"] {{ margin-bottom: 0; }}
+[data-testid="stSidebarUserContent"] > div > [data-testid="stVerticalBlock"] {{ gap: 0.45rem; min-height: calc(100vh - 2rem); }}
+.brand {{ display: flex; gap: 0.5rem; margin-bottom: 0.4rem; }}
+.brand .icon {{ color: {GREEN}; font-size: 1.8rem; margin-top: 0.05rem; }}
+.brand-title {{ font-size: 1.15rem; font-weight: 700; line-height: 1.25; }}
+.brand-subtitle {{ font-size: 0.8rem; color: #6b7280; line-height: 1.35; margin-top: 0.1rem; }}
+[data-testid="stSidebar"] button[kind="secondary"] {{ background: #ffffff; border: 1px solid #e3e6ea; border-radius: 0.6rem;
+    padding: 0.5rem 0.75rem; min-height: 0; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }}
+[data-testid="stSidebar"] button[kind="secondary"] > div {{ justify-content: flex-start !important; }}
+[data-testid="stSidebar"] button[kind="secondary"] p {{ font-size: 0.82rem; text-align: left; }}
+.st-key-new_chat button {{ padding: 0.6rem 0.75rem !important; }}
+.st-key-new_chat button p {{ font-weight: 700; font-size: 0.9rem !important; }}
+.st-key-new_chat [data-testid="stIconMaterial"] {{ color: transparent !important;
+    background: {ADD_CIRCLE} center / contain no-repeat; }}
+[class*="st-key-example_"] [data-testid="stIconMaterial"] {{ color: transparent !important;
+    background: {BUBBLE} center / contain no-repeat; }}
+.section-label {{ font-size: 0.8rem; color: #6b7280; margin: 0.35rem 0 0; }}
+[data-testid="stLayoutWrapper"]:has(> .st-key-sidebar_footer) {{ margin-top: auto; }}
+.info-box {{ border-radius: 0.6rem; padding: 0.65rem 0.75rem; display: flex; gap: 0.55rem; margin-top: 0.2rem; }}
+.info-box.about {{ background: #edf2fb; border: 1px solid #dbe4f3; }}
+.info-box.disclaimer {{ background: #fff6e8; border: 1px solid #f5e0bf; }}
+.info-box .svg-icon {{ width: 1rem; height: 1rem; margin-top: 0.1rem; }}
+.info-title {{ font-weight: 700; font-size: 0.85rem; color: {INK}; }}
+.info-text {{ font-size: 0.78rem; color: #4b5563; line-height: 1.4; margin-top: 0.1rem; }}
+.topbar, .st-key-top_new_chat {{ display: none; }}
+.st-key-top_new_chat button {{ min-height: 0; width: 1.7rem; height: 1.7rem; padding: 0; border: none;
+    background: {ADD_CIRCLE} center / contain no-repeat !important; }}
+.st-key-top_new_chat button p, .st-key-top_new_chat [data-testid="stIconMaterial"] {{ font-size: 0; }}
+
+/* On wide screens the sidebar is permanent, so its collapse control is hidden. */
+@media (min-width: 769px) {{
+    [data-testid="stSidebarHeader"] {{ display: none; }}
+    [data-testid="stSidebar"][aria-expanded="true"] {{ width: 18rem !important; }}
+    [data-testid="stMainBlockContainer"] {{ padding-top: 2rem; }}
+}}
+
+/* On narrow screens a top bar replaces the sidebar, and the sidebar opens as a drawer over the chat. */
+@media (max-width: 768px) {{
+    .topbar {{ display: flex; position: fixed; top: 0; left: 0; right: 0; height: 3.75rem; z-index: 999989;
+               align-items: center; justify-content: center; gap: 0.45rem; background: #f5f6f8; padding: 0 3.3rem;
+               border-bottom: 1px solid #e5e7eb; font-size: clamp(0.95rem, 4.2vw, 1.15rem); font-weight: 700; }}
+    .topbar .icon {{ color: {GREEN}; font-size: 1.5em; }}
+    .st-key-top_new_chat {{ display: flex; align-items: center; position: fixed; top: -0.125rem; right: 1rem;
+                            height: 3.75rem; z-index: 999991; }}
+    [data-testid="stExpandSidebarButton"] {{ background: {MENU} center / contain no-repeat !important; }}
+    [data-testid="stExpandSidebarButton"] > * {{ opacity: 0; }}
+    [data-testid="stSidebar"][aria-expanded="true"] {{ box-shadow: 0 0 0 100vmax rgba(17, 24, 39, 0.45); }}
+    [data-testid="stSidebarHeader"] {{ position: absolute; top: 0.9rem; right: 0.8rem; z-index: 2; }}
+    [data-testid="stSidebarCollapseButton"] {{ visibility: visible !important; }}
+    [data-testid="stSidebarCollapseButton"] button {{ width: 1.8rem; height: 1.8rem;
+        background: {CLOSE} center / contain no-repeat !important; }}
+    [data-testid="stSidebarCollapseButton"] button > * {{ opacity: 0; }}
+    .brand {{ padding-right: 2.5rem; }}
+    .section-label, [class*="st-key-example_"] {{ display: none !important; }}
+    [data-testid="stLayoutWrapper"]:has(> .st-key-sidebar_footer) {{ margin-top: 0.4rem; }}
+    [data-testid="stMainBlockContainer"] {{ padding-top: 5rem; }}
+}}
+
+/* On phones the user avatar is hidden and the note under the composer is shortened. */
+@media (max-width: 600px) {{
+    [data-testid="stChatMessage"]:has([aria-label="Chat message from user"]) [data-testid="stChatMessageAvatarCustom"] {{
+        display: none; }}
+    [data-testid="stChatMessageContent"] {{ max-width: 85%; }}
+    [data-testid="stBottomBlockContainer"]::after {{ content: "{SHORT_INPUT_NOTE}"; }}
+}}
+</style>
+"""
+
+
+@st.cache_resource(show_spinner="Loading the model...")
+def load_assistant() -> MedicalAssistant:
+    """Load the assistant once from the local model folder, or from Hugging Face when that folder is missing."""
+    folder = MODEL_DIR if Path(MODEL_DIR, "assistant_config.json").exists() else snapshot_download(MODEL_REPO)
+    return MedicalAssistant(folder)
+
+
+def respond(assistant: MedicalAssistant, question: str) -> dict:
+    """Return the chat message for one question, keeping the retrieval details only for debug mode."""
+    result = assistant.ask(question)
+    thresholds = f"answer threshold {assistant.config['answer_threshold']:.2f}"
+    if result["decision"] == "answer":
+        return {"role": "assistant",
+                "content": result["answer"].replace("\n", "  \n"),  # Keep the line breaks of list-style answers.
+                "caution": result["traditional_remedy"],
+                "debug": (f"Closest question in the knowledge base: {result['matched_question']}  \n"
+                          f"Similarity: {result['score']:.2f} ({thresholds}) · Source: {result['source']}")}
+    content = result["message"] + (FOLLOW_UP if result["decision"] == "not_enough_information" else "")
+    debug = f"Best similarity found: {result['score']:.2f} ({thresholds})" if "score" in result else None
+    return {"role": "assistant", "content": content, "caution": False, "debug": debug}
+
+
+def show(message: dict):
+    """Draw one chat message, adding the retrieval details only when debug mode is switched on."""
+    avatar = ":material/person:" if message["role"] == "user" else ":material/stethoscope:"
+    with st.chat_message(message["role"], avatar=avatar):
+        st.markdown(message["content"])
+        if message.get("caution"):
+            st.caption(f":material/info: {TRADITIONAL_NOTE}")
+        if DEBUG_MODE and message.get("debug"):
+            st.caption(message["debug"])
+
+
+def ask_example(question: str):
+    """Queue an example question so that it is answered like a typed question."""
+    st.session_state.pending = question
+
+
+def new_chat():
+    """Clear the conversation so that a new chat starts."""
+    st.session_state.messages = []
+    st.session_state.pop("pending", None)
+
+
+st.set_page_config(page_title=TITLE, page_icon=":material/stethoscope:", layout="centered")
+st.markdown(STYLE, unsafe_allow_html=True)
+assistant = load_assistant()
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+# The top bar and its new chat button only appear on narrow screens, where the sidebar is folded away.
+st.markdown(f"<div class='topbar'><span class='icon'>stethoscope</span>{TITLE}</div>", unsafe_allow_html=True)
+st.button("New chat", on_click=new_chat, key="top_new_chat")
+
+with st.sidebar:
+    st.markdown(f"<div class='brand'><span class='icon'>stethoscope</span><div><div class='brand-title'>{TITLE}</div>"
+                f"<div class='brand-subtitle'>{SUBTITLE}</div></div></div>", unsafe_allow_html=True)
+    st.button("New chat", icon=":material/add_circle:", on_click=new_chat, width="stretch", key="new_chat")
+    st.markdown("<div class='section-label'>Example questions</div>", unsafe_allow_html=True)
+    for i, example in enumerate(EXAMPLES):
+        st.button(example, icon=":material/chat_bubble:", on_click=ask_example, args=(example,), width="stretch",
+                  key=f"example_{i}")
+    with st.container(key="sidebar_footer"):
+        st.markdown(f"<div class='info-box about'><span class='svg-icon icon-info'></span>"
+                    f"<div><div class='info-title'>About</div><div class='info-text'>{ABOUT}</div></div></div>"
+                    f"<div class='info-box disclaimer'><span class='svg-icon icon-shield'>"
+                    f"</span><div><div class='info-title'>Disclaimer</div><div class='info-text'>{DISCLAIMER}</div>"
+                    "</div></div>", unsafe_allow_html=True)
+
+question = st.chat_input("Ask a medical question") or st.session_state.pop("pending", None)
+
+if not st.session_state.messages and not question:
+    st.markdown("<h2 style='text-align: center; margin-top: 30vh; font-weight: 700;'>How can I help you today?</h2>",
+                unsafe_allow_html=True)
+for message in st.session_state.messages:
+    show(message)
+if question:
+    user_message = {"role": "user", "content": question}
+    st.session_state.messages.append(user_message)
+    show(user_message)
+    answer = respond(assistant, question)
+    st.session_state.messages.append(answer)
+    show(answer)
